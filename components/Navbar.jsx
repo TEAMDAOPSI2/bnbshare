@@ -3,8 +3,9 @@ import {useState} from "react";
 import logo from 'public/assets/stake-logo.svg';
 
 const Navbar = () => {
-    const [nav, setNav] = useState(false);
+    // eslint-disable-next-line no-unused-vars
     const [color, setColor] = useState('#fff');
+    // eslint-disable-next-line no-unused-vars
     const [textColor, setTextColor] = useState('#333');
     return (
         <div style={{backgroundColor: `${color}`}} className='left-0 shadow w-full ease-in duration-300'>

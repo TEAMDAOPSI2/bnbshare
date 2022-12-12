@@ -4,7 +4,8 @@
         "es6": true
     },
     "extends": [
-        "plugin:react/recommended",
+//        "plugin:react/recommended",
+        "plugin:@next/next/recommended",
         "airbnb",
         "prettier",
         "plugin:import/recommended"
@@ -40,6 +41,9 @@
             "jsconfig": {
                 "config": "jsconfig.json"
             }
+        },
+        "react": {
+            "version": "detect"
         }
     }
 }
