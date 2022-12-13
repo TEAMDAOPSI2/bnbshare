@@ -12,9 +12,9 @@ const MakeMoneySection = () => (
           <p className="font-medium">Stake was built to empower everyone to own and build wealth through real estate</p>
         </div>
       </ReactWOW>
-      <div className="flex flex-row gap-4 mt-6 justify-center items-center">
+      <div className="flex flex-col sm:flex-row gap-4 mt-6 justify-center items-center">
         <ReactWOW animation="slideInUp" duration="1s">
-          <div className="info max-w-[300px] h-fit bg-white p-3 shadow rounded">
+          <div className="info max-w-full sm:max-w-[300px] h-fit bg-white p-3 shadow rounded order-1">
             <div className="ico flex flex-col">
               <img className="w-[80px] " src={MakeMoneyIco2.src} alt="" />
             </div>
@@ -23,7 +23,7 @@ const MakeMoneySection = () => (
           </div>
         </ReactWOW>
         <ReactWOW animation="slideInUp" duration="1s">
-          <div className="relative rounded shadow">
+          <div className="relative rounded shadow order-last sm:order-2 mx-10 sm:mx-0">
             <div className="flex flex-row h-[50px] w-fit py-3 px-5 rounded shadow justify-center bg-white absolute -left-10 top-2">
               <svg className="stroke-emerald-500" viewBox="0 0 24 24" focusable="false" aria-label="user">
                 <circle cx="12" cy="12" r="10" fill="none" fillRule="nonzero" stroke="none" strokeWidth="1.5" />
@@ -56,7 +56,7 @@ const MakeMoneySection = () => (
           </div>
         </ReactWOW>
         <ReactWOW animation="slideInUp" duration="1s">
-          <div className="info max-w-[300px] h-fit bg-white p-3 shadow rounded">
+          <div className="info max-w-full sm:max-w-[300px] h-fit bg-white p-3 shadow rounded order-3">
             <div className="ico flex flex-col">
               <img className="w-[80px] " src={MakeMoneyIco1.src} alt="" />
             </div>

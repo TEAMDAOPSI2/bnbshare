@@ -1,6 +1,6 @@
 // eslint-disable-next-line react/prop-types
 const Featured = ({ img, title, desc, className }) => (
-  <div className={`box px-4 py-6 shadow rounded-md mx-4 ${className || null}`}>
+  <div className={`box px-4 py-6 shadow rounded-md mx-4 mb-3 ${className || null}`}>
     <div className="icon">
       <img className="w-[80px]" src={img} alt="" />
     </div>

@@ -5,8 +5,8 @@ const InvestmentCalculatorSection = () => (
   <section>
     <div className="container mx-auto px-4 py-6">
       <h2 className="text-center text-3xl font-bold py-3">Investment calculator</h2>
-      <div className="gap-3 flex md:flex-row mt-5">
-        <div className="basis-[40%] p-8 border border-gray-200 rounded-md min-h-[440px] flex flex-col justify-between">
+      <div className="gap-3 flex flex-col md:flex-row mt-5">
+        <div className="basis-[100%] sm:basis-[40%] p-8 border border-gray-200 rounded-md min-h-[440px] flex flex-col justify-between">
           <h3 className="text-xl font-medium pb-5">How much do you want to invest?</h3>
 
           <div className="input">
@@ -38,7 +38,7 @@ const InvestmentCalculatorSection = () => (
             We expect the asset value to grow 30% over the next 5 years.
           </p>
         </div>
-        <div className="basis-[60%] px-6">
+        <div className="basis-[100%] sm:basis-[60%] px-6">
           <div className="flex flex-row justify-evenly gap-3 text-center">
             <div>
               <h3 className="text-xl font-medium pb-5">Total projected return:</h3>

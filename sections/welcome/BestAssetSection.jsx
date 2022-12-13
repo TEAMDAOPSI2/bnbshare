@@ -8,7 +8,7 @@ const BestAssetSection = () => (
   <section className="assets-class bg-gray-100 relative">
     <div className="clip"/>
     <div className="container px-3 py-12 mx-auto">
-      <div className="flex gap-3">
+      <div className="flex gap-3 flex-col sm:flex-row">
         <div className="basis-[40%] flex flex-col justify-center items-center ">
           <h2 className="text-4xl font-medium py-3 md:pr-5">Real estate combines the best of all asset classes</h2>
           <p className="md:pr-5">It is one of the most important asset classes to own and to build long term wealth</p>

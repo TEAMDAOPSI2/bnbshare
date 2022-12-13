@@ -7,41 +7,41 @@ const CustomNextArrow = (props) => {
   // eslint-disable-next-line react/prop-types
   const { onClick } = props;
   return (
-      <button
-          className="absolute right-0 top-1/2 h-[60px] w-[60px] bg-gray-100 hover:bg-gray-200 shadow rounded-full"
-          onClick={onClick}
+    <button
+      className="absolute right-0 top-1/2 h-[60px] w-[60px] bg-gray-100 hover:bg-gray-200 shadow rounded-full"
+      onClick={onClick}
+    >
+      <svg
+        viewBox="0 0 24 24"
+        focusable="false"
+        className="w-[50%] mx-auto"
+        aria-label="arrow-forward"
+        aria-hidden="true"
       >
-        <svg
-            viewBox="0 0 24 24"
-            focusable="false"
-            className="w-[50%] mx-auto"
-            aria-label="arrow-forward"
-            aria-hidden="true"
+        <circle cx="12" cy="12" r="10" fill="none" fillRule="nonzero" stroke="none" strokeWidth="1.5" />
+        <rect
+          x="2"
+          y="2"
+          width="20"
+          height="20"
+          rx="6"
+          fill="none"
+          fillRule="nonzero"
+          stroke="none"
+          strokeWidth="1.5"
+        />
+        <g
+          fill="none"
+          fillRule="nonzero"
+          stroke="currentColor"
+          strokeWidth="1.5"
+          strokeLinecap="round"
+          strokeLinejoin="round"
         >
-          <circle cx="12" cy="12" r="10" fill="none" fillRule="nonzero" stroke="none" strokeWidth="1.5" />
-          <rect
-              x="2"
-              y="2"
-              width="20"
-              height="20"
-              rx="6"
-              fill="none"
-              fillRule="nonzero"
-              stroke="none"
-              strokeWidth="1.5"
-          />
-          <g
-              fill="none"
-              fillRule="nonzero"
-              stroke="currentColor"
-              strokeWidth="1.5"
-              strokeLinecap="round"
-              strokeLinejoin="round"
-          >
-            <path d="M19 12H5 M14 17L19 12 M14 7L19 12" />
-          </g>
-        </svg>
-      </button>
+          <path d="M19 12H5 M14 17L19 12 M14 7L19 12" />
+        </g>
+      </svg>
+    </button>
   );
 };
 
@@ -49,44 +49,43 @@ const CustomPrevArrow = (props) => {
   // eslint-disable-next-line react/prop-types
   const { onClick } = props;
   return (
-      <button
-          className="absolute  left-0 top-1/2 z-10 h-[60px] w-[60px] bg-gray-100 hover:bg-gray-200 shadow rounded-full"
-          onClick={onClick}
+    <button
+      className="absolute  left-0 top-1/2 z-10 h-[60px] w-[60px] bg-gray-100 hover:bg-gray-200 shadow rounded-full"
+      onClick={onClick}
+    >
+      <svg
+        viewBox="0 0 24 24"
+        focusable="false"
+        className="w-[50%] mx-auto rotate-180"
+        aria-label="arrow-forward"
+        aria-hidden="true"
       >
-        <svg
-            viewBox="0 0 24 24"
-            focusable="false"
-            className="w-[50%] mx-auto rotate-180"
-            aria-label="arrow-forward"
-            aria-hidden="true"
+        <circle cx="12" cy="12" r="10" fill="none" fillRule="nonzero" stroke="none" strokeWidth="1.5" />
+        <rect
+          x="2"
+          y="2"
+          width="20"
+          height="20"
+          rx="6"
+          fill="none"
+          fillRule="nonzero"
+          stroke="none"
+          strokeWidth="1.5"
+        />
+        <g
+          fill="none"
+          fillRule="nonzero"
+          stroke="currentColor"
+          strokeWidth="1.5"
+          strokeLinecap="round"
+          strokeLinejoin="round"
         >
-          <circle cx="12" cy="12" r="10" fill="none" fillRule="nonzero" stroke="none" strokeWidth="1.5" />
-          <rect
-              x="2"
-              y="2"
-              width="20"
-              height="20"
-              rx="6"
-              fill="none"
-              fillRule="nonzero"
-              stroke="none"
-              strokeWidth="1.5"
-          />
-          <g
-              fill="none"
-              fillRule="nonzero"
-              stroke="currentColor"
-              strokeWidth="1.5"
-              strokeLinecap="round"
-              strokeLinejoin="round"
-          >
-            <path d="M19 12H5 M14 17L19 12 M14 7L19 12" />
-          </g>
-        </svg>
-      </button>
+          <path d="M19 12H5 M14 17L19 12 M14 7L19 12" />
+        </g>
+      </svg>
+    </button>
   );
 };
-
 
 const PropertiesSection = () => {
   const settings = {
@@ -96,6 +95,22 @@ const PropertiesSection = () => {
     className: 'my-5',
     nextArrow: <CustomNextArrow />,
     prevArrow: <CustomPrevArrow />,
+    responsive: [
+      {
+        breakpoint: 780,
+        settings: {
+          slidesToShow: 2,
+          slidesToScroll: 2,
+        },
+      },
+      {
+        breakpoint: 480,
+        settings: {
+          slidesToShow: 1,
+          slidesToScroll: 1,
+        },
+      },
+    ],
   };
   return (
     <section className="bg-gray-100 properties-founded">

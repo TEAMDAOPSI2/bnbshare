@@ -93,13 +93,13 @@ const InvestorsReviewSection = () => {
     prevArrow: <CustomPrevArrow />,
   };
   return (
-    <section className="investor-say bg-gray-200 min-h-[500px] relative">
+    <section className="investor-say bg-gray-200 min-h-[700px] sm:min-h-[550px] relative">
       <div className="clip"/>
       <div className="container px-3 py-12 mx-auto">
-        <div className="grid gap-6 grid-cols-2">
-          <div className="flex flex-col justify-center">
-            <h2 className="text-5xl leading-[1.2] pb-2 font-bold md:w-[80%]">Don’t just take our word for it,</h2>
-            <h2 className="text-5xl leading-[1.2] font-bold md:w-[80%]">see what our investors have to say</h2>
+        <div className="grid gap-6 grid-cols-1 sm:grid-cols-2 ">
+          <div className="flex flex-col justify-center max-w-[80%] sm:max-w-[100%] mx-auto">
+            <h2 className="sm:text-5xl text-3xl sm:text-left text-center leading-[1.2] pb-2 font-bold md:w-[80%]">Don’t just take our word for it,</h2>
+            <h2 className="sm:text-5xl text-3xl sm:text-left text-center leading-[1.2] font-bold md:w-[80%]">see what our investors have to say</h2>
           </div>
           <div className="slider relative">
             {/* eslint-disable-next-line react/jsx-props-no-spreading */}

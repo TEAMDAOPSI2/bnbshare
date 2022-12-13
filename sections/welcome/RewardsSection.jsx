@@ -5,7 +5,7 @@ import IntroImg from 'public/assets/onboarding/stake-tier-2.svg';
 const RewardsSection = () => (
   <section>
     <div className="container mx-auto py-[60px] px-3">
-      <div className="flex gap-6 flex-row">
+      <div className="flex gap-6 sm:flex-row flex-col">
         <div className="basis-[40%]">
           <h2 className="text-4xl py-3">Get reward as you invest</h2>
           <p className="py-3">
@@ -20,9 +20,9 @@ const RewardsSection = () => (
             <Slider />
           </div>
         </div>
-        <div className="w-[60%] rounded-md p-6 border border-gray-200">
-          <div className="flex flex-row justify-between">
-            <div className="flex flex-row items-center justify-center">
+        <div className="basis-[60%] rounded-md p-6 border border-gray-200">
+          <div className="flex flex-col sm:flex-row items-center sm:items-start sm:justify-between justify-center">
+            <div className="flex flex-row items-center justify-center mb-3">
               <img src={IntroImg.src} alt="Intro" className="w-[100px]" />
               <p className="text-4xl font-medium">Plus</p>
             </div>

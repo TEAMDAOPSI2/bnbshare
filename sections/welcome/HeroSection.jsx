@@ -8,8 +8,8 @@ const HeroSection = () => (
   <section className="hero-welcome">
     <div className="clip-path" />
     <div className="container py-12 px-3 mx-auto">
-      <div className="flex flex-row">
-        <div className="basis-[45%]">
+      <div className="flex flex-col sm:flex-row">
+        <div className="sm:basis-[45%] basis-[100%]">
           <div className="flex h-full justify-center flex-col gap-3">
             <ReactWOW animation="slideInUp" duration="1s">
               <h1 className="text-3xl font-bold">The modern way for anyone to invest in real estate</h1>
@@ -21,7 +21,7 @@ const HeroSection = () => (
             </p>
             </ReactWOW>
             <ReactWOW animation="slideInDown" duration="1s">
-            <button className="inline-block flex flex-row items-center text-lg font-semibold text-slate-800 hover:text-emerald-600 hover:underline hover:underline-offset-auto">
+            <button className="inline-block flex flex-row items-center text-lg font-semibold text-slate-800 hover:text-emerald-600 hover:underline hover:underline-offset-auto w-fit">
               <svg viewBox="0 0 32 32" focusable="false" className="w-[40px]" aria-hidden="true">
                 <rect x="10.6667" y="10.6667" width="12" height="12" fill="white" />
                 <path
@@ -33,7 +33,7 @@ const HeroSection = () => (
             </button>
             </ReactWOW>
             <ReactWOW animation="slideInDown" duration="1s">
-            <div className="flex flex-row gap-3">
+            <div className="flex flex-row gap-3 mb-6">
               <a href="#">
                 <img src={AppStore.src} alt="app store" />
               </a>
@@ -44,8 +44,9 @@ const HeroSection = () => (
             </ReactWOW>
           </div>
         </div>
-        <div className="basis-[55%] relative flex inset-0 justify-center w-[300px] h-[700px]">
-          <div className="absolute z-20 w-[300px]">
+        <div className=" basis-[100%] sm:basis-[55%] relative flex inset-0 justify-end w-[100%] h-[700px]">
+          <div className="h-[710px] sm:h-[200px]" />
+          <div className="absolute z-20 w-[300px] right-1/2 translate-x-1/2">
             <ReactWOW animation="slideInUp" duration="1s">
               <img className="h-[650px] w-full rounded-[60px]" src={BannerPhoneImg.src} alt="Banner Phone" />
               <picture className="absolute top-0">
