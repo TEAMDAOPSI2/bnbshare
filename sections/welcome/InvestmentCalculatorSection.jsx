@@ -12,7 +12,7 @@ const InvestmentCalculatorSection = () => (
           <div className="input">
             <div className="flex flex-row justify-between py-3">
               <p>Initial investment</p>
-              <p className="font-medium text-xl">AED 105,000</p>
+              <p className="font-medium text-xl">USD 105,000</p>
             </div>
             <Slider />
           </div>
@@ -42,27 +42,27 @@ const InvestmentCalculatorSection = () => (
           <div className="flex flex-row justify-evenly gap-3 text-center">
             <div>
               <h3 className="text-xl font-medium pb-5">Total projected return:</h3>
-              <p className="text-3xl font-bold text-emerald-400">AED 1,000,000</p>
+              <p className="text-3xl font-bold text-soft-primary">USD 1,000,000</p>
             </div>
             <div>
               <h3 className="text-xl font-medium pb-5">Expected rental income:</h3>
-              <p className="text-3xl font-bold text-emerald-400">
-                AED 379 <span className="text-base font-normal text-black">/mont</span>
+              <p className="text-3xl font-bold text-soft-primary">
+                USD 379 <span className="text-base font-normal text-black">/mont</span>
               </p>
             </div>
           </div>
           <div className="grid gap-4 grid-cols-3 mt-6">
             <div className="bg-gray-100 py-3 text-center rounded">
               <p>Initial investment</p>
-              <p className="font-medium text-base">AED 35,000</p>
+              <p className="font-medium text-base">USD 35,000</p>
             </div>
             <div className="bg-gray-100 py-3 text-center rounded">
               <p>Total rental income</p>
-              <p className="font-medium text-base">AED 21,000</p>
+              <p className="font-medium text-base">USD 21,000</p>
             </div>
             <div className="bg-gray-100 py-3 text-center rounded">
               <p>Value appreciation</p>
-              <p className="font-medium text-base">AED 8,000</p>
+              <p className="font-medium text-base">USD 8,000</p>
             </div>
           </div>
         </div>

@@ -129,7 +129,7 @@ const Property = () => {
               <span className="ml-1 text-sm font-medium">Dubai</span>
             </div>
             <div className="rounded-lg px-2 py-1  flex flex-row justify-between items-center bg-white ml-3">
-              <svg className="stroke-emerald-500 w-[20px]" viewBox="0 0 24 24" focusable="false" aria-label="user">
+              <svg className="stroke-primary w-[20px]" viewBox="0 0 24 24" focusable="false" aria-label="user">
                 <circle cx="12" cy="12" r="10" fill="none" fillRule="nonzero" stroke="none" strokeWidth="1.5" />
                 <rect
                   x="2"
@@ -143,7 +143,7 @@ const Property = () => {
                   strokeWidth="1.5"
                 />
                 <g
-                  className="stroke-emerald-500"
+                  className="stroke-primary"
                   fill="none"
                   fillRule="nonzero"
                   stroke="currentColor"
@@ -161,12 +161,12 @@ const Property = () => {
         <div className="py-3 px-5">
           <h3 className="text-xl font-medium">1 Bed in Bay Central Dubai Marina</h3>
           <div className="flex flex-row items-center gap-2">
-            <p className="text-emerald-500 text-xl font-semibold grow-1">
+            <p className="text-primary text-xl font-semibold grow-1">
               <span className="text-base">AED</span> 1,000,000
             </p>
             <div className="flex flex-row grow items-center justify-end py-3">
               <div className="bg-gray-200 rounded-full h-2.5 bg-gray-300 w-[120px]">
-                <div className="bg-emerald-500 h-2.5 rounded-full" style={{ width: '45%' }} />
+                <div className="bg-primary h-2.5 rounded-full" style={{ width: '45%' }} />
               </div>
               <p className="text-sm ml-1">45% founded</p>
             </div>

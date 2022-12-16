@@ -1,20 +1,23 @@
+@import url('https://fonts.googleapis.com/css2?family=Plus+Jakarta+Sans:ital,wght@0,200;0,300;0,400;0,500;0,600;0,700;0,800;1,200;1,300;1,400;1,500;1,600;1,700;1,800&display=swap');
+
+
 @tailwind base;
 @tailwind components;
 @tailwind utilities;
 
 /*roots variables */
 :root {
-  --primary-color: #0fc713;
+  --primary-color: #3b5998;
   --secondary-color: #2d3748;
   --tertiary-color: #4a5568;
-  --primary-background-color: #41ce8e;
+  --primary-background-color: #3b5998;
 }
 
 html,
 body {
   padding: 0;
   margin: 0;
-  font-family: -apple-system, BlinkMacSystemFont, Segoe UI, Roboto, Oxygen,
+  font-family: -apple-system, Plus Jakarta Sans, BlinkMacSystemFont, Segoe UI, Roboto, Oxygen,
   Ubuntu, Cantarell, Fira Sans, Droid Sans, Helvetica Neue, sans-serif;
 }
 
@@ -103,7 +106,7 @@ svg {
     padding: 20px;
     z-index: 9;
     @apply rounded-md;
-    @apply bg-emerald-100;
+    @apply bg-sky-200;
     @media (max-width: 680px) {
       display: none;
     }
@@ -137,12 +140,12 @@ svg {
   height: 20px !important;
   border-radius: 50% !important;
   border: 2px solid #fff !important;
-  background-color: #0fc713 !important;
+  background-color: var(--primary-background-color) !important;
   margin-top: -5px !important;
 }
 
 .rc-slider-track {
-  background-color: #0fc713 !important;
+  background-color: var(--primary-background-color) !important;
   height: 10px !important;
 }
 
@@ -227,8 +230,28 @@ svg {
     @apply hover:bg-gray-200;
     @apply hover:text-gray-900;
   }
-  button.active{
+
+  button.active {
     @apply bg-emerald-500;
     @apply text-white;
+  }
+}
+
+.properties-hero {
+  background-color: #121c30;
+  @apply relative text-white;
+  .clip-path {
+    content: '';
+    position: absolute;
+    z-index: 1;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    clip-path: polygon(100% 63%, 91% 100%, 100% 100%);
+    @apply bg-gray-200;
+    @media (max-width: 680px) {
+      display: none;
+    }
   }
 }

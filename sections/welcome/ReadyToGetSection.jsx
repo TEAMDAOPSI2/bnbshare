@@ -5,7 +5,7 @@ import IphoneBorderImg from "../../public/assets/common/iphone-13-pro-frame.png"
 
 const ReadyToGetSection = () => (
   <section>
-    <div className="container px-3 pb-12 mx-auto">
+    <div className="container px-3 py-12 mx-auto">
       <div className="grid gap-4 md:grid-cols-2">
         <div className="flex flex-col justify-center mb-3 order-last sm:order-first">
           <h2 className="md:text-[60px] text-3xl md:leading-[80px] md:w-[70%] font-semibold">Ready to get started?</h2>

@@ -25,7 +25,7 @@ const MakeMoneySection = () => (
         <ReactWOW animation="slideInUp" duration="1s">
           <div className="relative rounded shadow order-last sm:order-2 mx-10 sm:mx-0">
             <div className="flex flex-row h-[50px] w-fit py-3 px-5 rounded shadow justify-center bg-white absolute -left-10 top-2">
-              <svg className="stroke-emerald-500" viewBox="0 0 24 24" focusable="false" aria-label="user">
+              <svg className="stroke-primary" viewBox="0 0 24 24" focusable="false" aria-label="user">
                 <circle cx="12" cy="12" r="10" fill="none" fillRule="nonzero" stroke="none" strokeWidth="1.5" />
                 <rect
                   x="2"
@@ -39,7 +39,7 @@ const MakeMoneySection = () => (
                   strokeWidth="1.5"
                 />
                 <g
-                  className="stroke-emerald-500"
+                  className="stroke-primary"
                   fill="none"
                   fillRule="nonzero"
                   stroke="currentColor"

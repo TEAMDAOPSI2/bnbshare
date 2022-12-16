@@ -148,7 +148,7 @@ const PropertiesSection = () => {
         <div className="text-center mt-[60px] mb-[40px]">
           <a
             href="#"
-            className="rounded-lg py-3 px-6 border border-gray-300 font-semibold transition ease-in-out duration-150 hover:bg-emerald-500 hover:border-emerald-400 hover:text-white"
+            className="rounded-lg py-3 px-6 border border-gray-300 font-semibold transition ease-in-out duration-150 hover:bg-primary hover:border-primary-hover hover:text-white"
           >
             View available properties
           </a>

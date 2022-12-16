@@ -15,7 +15,7 @@ const SliderElement = ({ img, icon, desc }) => (
   <div className="w-full h-full">
     <ReactWOW animation="zoomInRight" duration="1s">
       <div className="desc">
-        <div className="w-[40px] rounded-md h-1 bg-emerald-500" />
+        <div className="w-[40px] rounded-md h-1 bg-primary" />
         {desc}
       </div>
     </ReactWOW>
@@ -54,7 +54,7 @@ const HowItWorks = () => {
               className={`py-3 cursor-pointer ${currentSlide === 0 ? 'active' : null}`}
               onClick={() => setCurrentSlide(0)}
             >
-              {currentSlide === 0 ? <div className="w-[40px] rounded-md h-1 bg-emerald-500" /> : null}
+              {currentSlide === 0 ? <div className="w-[40px] rounded-md h-1 bg-primary" /> : null}
               <h4>Browse</h4>
               <p>Sign up in less than 3 minutes and browse our collection of properties</p>
             </div>
@@ -64,9 +64,9 @@ const HowItWorks = () => {
               className={`py-3 cursor-pointer ${currentSlide === 1 ? 'active' : null}`}
               onClick={() => setCurrentSlide(1)}
             >
-              {currentSlide === 1 ? <div className="w-[40px] rounded-md h-1 bg-emerald-500" /> : null}
+              {currentSlide === 1 ? <div className="w-[40px] rounded-md h-1 bg-primary" /> : null}
               <h4>Purchase</h4>
-              <p>Buy a piece of the ones you love, starting from only AED 500</p>
+              <p>Buy a piece of the ones you love, starting from only USD 500</p>
             </div>
           </ReactWOW>
           <ReactWOW animation="slideInUp" duration="1.4s">
@@ -74,7 +74,7 @@ const HowItWorks = () => {
               className={`py-3 cursor-pointer ${currentSlide === 2 ? 'active' : null}`}
               onClick={() => setCurrentSlide(2)}
             >
-              {currentSlide === 2 ? <div className="w-[40px] rounded-md h-1 bg-emerald-500" /> : null}
+              {currentSlide === 2 ? <div className="w-[40px] rounded-md h-1 bg-primary" /> : null}
               <h4>Own</h4>
               <p>Sit back and track your income and investments online</p>
             </div>
@@ -84,7 +84,7 @@ const HowItWorks = () => {
               className={`py-3 cursor-pointer ${currentSlide === 3 ? 'active' : null}`}
               onClick={() => setCurrentSlide(3)}
             >
-              {currentSlide === 3 ? <div className="w-[40px] rounded-md h-1 bg-emerald-500" /> : null}
+              {currentSlide === 3 ? <div className="w-[40px] rounded-md h-1 bg-primary" /> : null}
               <h4>Exit</h4>
               <p>Hold, exit or resell your stake in a way that suits your financial goals</p>
             </div>
@@ -110,7 +110,7 @@ const HowItWorks = () => {
               {currentSlide === 0 &&
                   'Our team of property professionals combine a data driven valuation and analysis process with over 20 years of leadership experience at the top real estate companies in Dubai, to source the best rental properties with the highest investment potential for you.'}
               {currentSlide === 1 &&
-                  'Buy a piece of the ones you love, starting from only AED 500. We offer a range of investment options to suit your financial goals.'}
+                  'Buy a piece of the ones you love, starting from only USD 500. We offer a range of investment options to suit your financial goals.'}
               {currentSlide === 2 &&
                   'Sit back and track your income and investments online. We provide you with a monthly income statement and a dashboard to track your investments.'}
               {currentSlide === 3 &&

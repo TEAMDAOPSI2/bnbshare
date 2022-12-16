@@ -11,7 +11,7 @@ const UserSection = () => (
           </div>
           <div className="mb-3">
             <h4 className="text-4xl font-bold py-3">
-              AED 81M<span>+</span>
+              USD 81M<span>+</span>
             </h4>
             <p>in properties funded</p>
           </div>
@@ -21,7 +21,7 @@ const UserSection = () => (
           </div>
           <div className="mb-3">
             <h4 className="text-4xl font-bold py-3">
-              AED 2.2M<span>+</span>
+              USD 2.2M<span>+</span>
             </h4>
             <p>rental income paid</p>
           </div>

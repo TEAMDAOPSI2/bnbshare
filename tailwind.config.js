@@ -8,12 +8,17 @@ module.exports = {
     theme: {
         extend: {
             colors: {
-                'primary': '#209476',
+                'primary': '#3b5998',
+                'dark-primary': '#2d4373',
+                'soft-primary': '#506db0',
                 'secondary': '#10B981',
                 'danger': '#EF4444',
+                'primary-hover': '#2d4373',
 
             }
         },
+        fontFamily: {
+            'sans': ['Plus Jakarta Sans', 'Segoe UI','sans-serif'],
+        }
     },
-    plugins: [],
 }

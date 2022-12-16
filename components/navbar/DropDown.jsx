@@ -11,7 +11,7 @@ const DropDown = (props) => {
       <Menu>
         {({ open }) => (
           <>
-            <Menu.Button className={`flex flex-row gap-2 items-center justify-center hover:text-emerald-500 ${open ? 'text-emerald-500' : null}`}>
+            <Menu.Button className={`flex flex-row gap-2 items-center justify-center hover:text-primary ${open ? 'text-primary' : null}`}>
               {title} <FontAwesomeIcon className="w-4" icon={open ? faAngleUp : faAngleDown} />
             </Menu.Button>
             <Menu.Items className="focus:outline-none absolute top-[60px] z-10 origin-top-left  w-56  divide-y divide-gray-100 rounded-md bg-white shadow-lg border border-gray-200">
@@ -24,8 +24,8 @@ const DropDown = (props) => {
                         className={`flex flex-row gap-2 items-center justify-start ${active && 'bg-gray-100'} w-full rounded-md p-2`}
                         href="/account-settings"
                       >
-                        <span className="text-emerald-500 w-5">{item.icon}</span>
-                        <span className="text-gray-400 ml-2 hover:text-emerald-500">{item.name}</span>
+                        <span className="text-primary w-5">{item.icon}</span>
+                        <span className="text-gray-400 ml-2 hover:text-primary">{item.name}</span>
                       </Link>
                     )}
                   </Menu.Item>

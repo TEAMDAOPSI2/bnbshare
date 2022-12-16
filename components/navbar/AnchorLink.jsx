@@ -2,11 +2,11 @@ import Link from 'next/link';
 
 const AnchorLink = (props) => {
   // eslint-disable-next-line react/prop-types
-  const { href, children } = props;
+  const { href, children, className } = props;
   return (
-    <div className="p-3 text-black hover:text-emerald-400 z-10">
-      <Link href={href} className="">
-          {children}
+    <div className={`p-3 text-black hover:text-primary-hover z-10 ${className || null}`}>
+      <Link href={href} className="font-medium">
+        {children}
       </Link>
     </div>
   );

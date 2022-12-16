@@ -25,7 +25,7 @@ const FeaturesSection = () => (
         <div className="grid gap-7 lg:grid-cols-4 md:grid-cols-2 mt-6">
           <Featured
             img={FeaturesImg1.src}
-            title="Invest in real estate from only AED 500"
+            title="Invest in real estate from only USD 500"
             desc="With fractionalised properties there is no mortgage or large down payments required"
           />
           <Featured
