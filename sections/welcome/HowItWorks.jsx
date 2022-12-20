@@ -46,7 +46,7 @@ const HowItWorks = () => {
       <div className="container pt-6 sm:py-6 px-3 mx-auto">
         <div className="text-center mb-6">
           <h2 className="text-4xl py-3 font-semibold">How it works</h2>
-          <p className="font-medium">BNBshares is available to savvy investors all over the world</p>
+          <p className="font-medium">Shares is available to savvy investors all over the world</p>
         </div>
         <div className="hidden sm:grid gap-4 grid-cols-4 selector mb-6">
           <ReactWOW animation="slideInUp" duration="1s">
