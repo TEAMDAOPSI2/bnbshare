@@ -16,7 +16,7 @@ const Pills = (props) => {
               }`}
             >
               <h3 className="text-lg font-semibold">{title}</h3>
-              <FontAwesomeIcon icon={open ? faMinus : faPlus} className="text-gray-400" />
+              <FontAwesomeIcon icon={open ? faMinus : faPlus} className="text-gray-400 w-4" />
             </Disclosure.Button>
             <Transition
               enter="transition ease-out duration-100"
