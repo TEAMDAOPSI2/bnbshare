@@ -26,7 +26,7 @@ const Worlds = () => (
           </p>
           <p>
             Shares is a digital real estate investment platform, built to change this. We leverage our network and
-            expertise, built up over 20+ years leading the biggest real estate companies in Dubai, to source the best
+            expertise, built up over 20+ years leading the biggest real estate companies in Bali, to source the best
             properties in our markets, and break down the entry barrier for investors to only AED 500 (c. 136 USD). The
             rest is on us - we manage your all of your investments, from acquisition to exit, and distribute monthly
             rental payments and sales income directly to your Shares wallet.

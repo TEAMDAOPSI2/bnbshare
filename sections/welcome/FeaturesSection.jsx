@@ -41,7 +41,7 @@ const FeaturesSection = () => (
           <Featured
             img={FeaturesImg4.src}
             title="Trusted entity with real estate expertise"
-            desc="Shares is regulated by the DFSA and our team has held leadership positions at the biggest developers in Dubai for over 20 years"
+            desc="Shares is regulated by the DFSA and our team has held leadership positions at the biggest developers in Bali for over 20 years"
           />
         </div>
       </ReactWOW>

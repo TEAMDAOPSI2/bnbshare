@@ -119,7 +119,7 @@ const PropertiesSection = () => {
           <h2 className="text-3xl font-bold py-3">Funded properties</h2>
           <p className="text-center md:w-[70%] py-3 text-gray-900">
             We leverage our network and expertise, built up over 20+ years leading the biggest real estate companies in
-            Dubai, to source the best properties with the highest investment potential for you
+            Bali, to source the best properties with the highest investment potential for you
           </p>
         </div>
 

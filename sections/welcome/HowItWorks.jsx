@@ -108,7 +108,7 @@ const HowItWorks = () => {
           <div className="py-6 block sm:hidden">
             <p className="py-3">
               {currentSlide === 0 &&
-                  'Our team of property professionals combine a data driven valuation and analysis process with over 20 years of leadership experience at the top real estate companies in Dubai, to source the best rental properties with the highest investment potential for you.'}
+                  'Our team of property professionals combine a data driven valuation and analysis process with over 20 years of leadership experience at the top real estate companies in Bali, to source the best rental properties with the highest investment potential for you.'}
               {currentSlide === 1 &&
                   'Buy a piece of the ones you love, starting from only USD 500. We offer a range of investment options to suit your financial goals.'}
               {currentSlide === 2 &&
@@ -126,7 +126,7 @@ const HowItWorks = () => {
             <SliderElement
               img={HowItWorksImg1}
               icon={HowItWorksIcon1}
-              desc="Our team of property professionals combine a data driven valuation and analysis process with over 20 years of leadership experience at the top real estate companies in Dubai, to source the best rental properties with the highest investment potential for you."
+              desc="Our team of property professionals combine a data driven valuation and analysis process with over 20 years of leadership experience at the top real estate companies in Bali, to source the best rental properties with the highest investment potential for you."
             />
           )}
           {currentSlide === 1 && (

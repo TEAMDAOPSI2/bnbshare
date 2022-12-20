@@ -2,6 +2,11 @@ import Slider from 'react-slick';
 import 'slick-carousel/slick/slick.css';
 import 'slick-carousel/slick/slick-theme.css';
 import ReactWOW from 'react-wow';
+import Villa1 from 'public/assets/properties/villa_1.jpg';
+import Villa2 from 'public/assets/properties/villa_2.jpg';
+import Villa3 from 'public/assets/properties/villa_3.jpg';
+import Villa4 from 'public/assets/properties/villa_4.jpg';
+import IDFlags from 'public/assets/Flag_of_Indonesia.png';
 
 const CustomNextArrow = (props) => {
   // eslint-disable-next-line react/prop-types
@@ -105,27 +110,15 @@ const Property = () => {
           <div className="img-slider">
             {/* eslint-disable-next-line react/jsx-props-no-spreading */}
             <Slider {...settings}>
-              <img
-                src="https://stake-dev-env.s3.eu-west-1.amazonaws.com/properties/71/images/1091/1280px_main_7esDt7B0glXroVvMNM4Bb7StDBgsVKyE4PF6Hf51.jpeg"
-                alt="listing 1"
-              />
-              <img
-                src="https://stake-dev-env.s3.eu-west-1.amazonaws.com/properties/75/images/1145/1000px_main_FHWIycGmnWrrJUgUve6cVxMNjsxNYLkpL04dTMdg.jpeg"
-                alt="listing 1"
-              />
-              <img
-                src="https://stake-dev-env.s3.eu-west-1.amazonaws.com/properties/71/images/1091/1280px_main_7esDt7B0glXroVvMNM4Bb7StDBgsVKyE4PF6Hf51.jpeg"
-                alt="listing 1"
-              />
-              <img
-                src="https://stake-dev-env.s3.eu-west-1.amazonaws.com/properties/75/images/1145/1000px_main_FHWIycGmnWrrJUgUve6cVxMNjsxNYLkpL04dTMdg.jpeg"
-                alt="listing 1"
-              />
+              <img className="w-full h-[280px] object-cover rounded-t-md" src={Villa1.src} alt="listing 1" />
+              <img className="w-full h-[280px] object-cover rounded-t-md" src={Villa2.src} alt="listing 2" />
+              <img className="w-full h-[280px] object-cover rounded-t-md" src={Villa3.src} alt="listing 3" />
+              <img className="w-full h-[280px] object-cover rounded-t-md" src={Villa4.src} alt="listing 4" />
             </Slider>
           </div>
           <div className="absolute top-2 left-2 flex flex-row">
             <div className="rounded-lg px-2 py-1  flex flex-row justify-between items-center bg-white">
-              <img src="https://getstake.com/assets/flags/ae.png" alt="dubai flag" className="w-5 h-5 rounded-full" />
+              <img src={IDFlags.src} alt="Indonesia flag" className="w-5 h-5 rounded-full" />
               <span className="ml-1 text-sm font-medium">Bali</span>
             </div>
             <div className="rounded-lg px-2 py-1  flex flex-row justify-between items-center bg-white ml-3">
@@ -159,10 +152,10 @@ const Property = () => {
           </div>
         </div>
         <div className="py-3 px-5">
-          <h3 className="text-xl font-medium">1 Bed in Bay Central Dubai Marina</h3>
+          <h3 className="text-xl font-medium">1 Bed in Canggu, Bali.</h3>
           <div className="flex flex-row items-center gap-2">
             <p className="text-primary text-xl font-semibold grow-1">
-              <span className="text-base">AED</span> 1,000,000
+              <span className="text-base">USD</span> 560,000
             </p>
             <div className="flex flex-row grow items-center justify-end py-3">
               <div className="bg-gray-200 rounded-full h-2.5 bg-gray-300 w-[120px]">
@@ -187,7 +180,7 @@ const Property = () => {
           </div>
           <div className="flex flex-row justify-between mt-5 mb-3">
             <p className="font-semibold">
-              <span className="font-light">Rent</span> AED 9,167.month
+              <span className="font-light">Rent</span> USD 9,167.month
             </p>
             <p className="font-semibold">
               <span className="font-light">Distributed</span> Monthly
@@ -200,4 +193,3 @@ const Property = () => {
 };
 
 export default Property;
-

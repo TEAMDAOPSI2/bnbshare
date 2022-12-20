@@ -6,7 +6,7 @@ const Hero = () => (
         <h2 className="text-4xl font-bold py-3">Properties</h2>
         <p className="text-lg text-center md:max-w-[70%]">
           We leverage our network and expertise, built up over 20+ years leading the biggest real estate companies in
-          Dubai, to source the best properties with the highest investment potential for you
+          Bali, to source the best properties with the highest investment potential for you
         </p>
       </div>
     </div>

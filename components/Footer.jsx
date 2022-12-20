@@ -38,7 +38,7 @@ const Footer = () => (
       <div className="flex justify-between flex-row">
         <div className="flex flex-col">
           <img src={logo.src} alt="BNBShares" className="w-28" />
-          <p className="text-white">Office 170, Level 1, Gate Avenue, DIFC, Dubai</p>
+          <p className="text-white">Office heart of Canggu, Bali</p>
         </div>
         <div>
           <button
@@ -84,7 +84,7 @@ const Footer = () => (
       <div className="py-3 text-gray-400">© 2022 Shares. All rights reserved</div>
       <div className="py-6 border-t border-gray-500">
         <p className="text-sm text-gray-500">
-          Shares Properties Limited is regulated by the Dubai Financial Services Authority (DFSA) as an Operator of a
+          Shares Properties Limited is regulated by the Bali Financial Services Authority (DFSA) as an Operator of a
           Property Investment Crowdfunding Platform. Shares platform consists of the website (shares ) and may include
           mobile apps in the future. By using shares, you agree to be bound by the Terms & Conditions, Cookie Notice and
           Privacy Policy. All investments through shares carry risk and are not guaranteed. Please read Key Risks before

@@ -39,7 +39,7 @@ const FaqSection = () => {
           <Pills title="How does Shares determine an offer price?">
             <p className="py-2">
               We review the characteristics and condition of the property, as well as the sales transactions history
-              published by the Dubai Land Department, via Reiden and other data sources. We then perform a value
+              published by the Bali Land Department, via Reiden and other data sources. We then perform a value
               analysis of comparable sales of properties with similar characteristics, condition and locations, as well
               as the investment potential of the asset.
             </p>
