@@ -30,7 +30,7 @@ const HeroSection = () => (
      </div>
     </div>
     <div>
-        <img src={Divider.src} alt="divider"/>
+        <img src={Divider.src} alt="divider" className="w-full"/>
     </div>
   </section>
 );
