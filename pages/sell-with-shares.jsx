@@ -16,7 +16,7 @@ const SellWithShares = () => {
   return (
     <>
       <Head>
-        <title>Sell with Shares</title>
+        <title>Shares | Sell with Shares</title>
       </Head>
       <Navbar pathName={pathname} />
       <HeroSection />
