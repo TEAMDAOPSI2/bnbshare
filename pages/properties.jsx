@@ -2,7 +2,8 @@ import Head from 'next/head';
 import Navbar from '@/components/Navbar';
 import Hero from '@/sections/properties/Hero';
 import { useRouter } from 'next/router';
-import ListProperties from "@/sections/properties/ListProperties";
+import ListProperties from '@/sections/properties/ListProperties';
+import Footer from '@/components/Footer';
 
 const properties = () => {
   const router = useRouter();
@@ -14,7 +15,8 @@ const properties = () => {
       </Head>
       <Navbar pathName={pathname} />
       <Hero />
-      <ListProperties/>
+      <ListProperties />
+      <Footer />
     </>
   );
 };

@@ -9,7 +9,7 @@ const MakeMoneySection = () => (
       <ReactWOW animation="slideInUp" duration="1s">
         <div className="text-center">
           <h2 className="text-4xl py-3 font-semibold">So, how well you make money?</h2>
-          <p className="font-medium">Stake was built to empower everyone to own and build wealth through real estate</p>
+          <p className="font-medium">Shares was built to empower everyone to own and build wealth through real estate</p>
         </div>
       </ReactWOW>
       <div className="flex flex-col sm:flex-row gap-4 mt-6 justify-center items-center">

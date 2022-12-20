@@ -11,23 +11,25 @@ const DropDown = (props) => {
       <Menu>
         {({ open }) => (
           <>
-            <Menu.Button className={`flex flex-row gap-2 items-center justify-center hover:text-primary ${open ? 'text-primary' : null}`}>
+            <Menu.Button
+              className={`flex flex-row gap-2 items-center  w-full sm:w-fit justify-between sm:justify-center text-white sm:text-black hover:text-primary ${
+                open ? 'text-primary' : null
+              }`}
+            >
               {title} <FontAwesomeIcon className="w-4" icon={open ? faAngleUp : faAngleDown} />
             </Menu.Button>
-            <Menu.Items className="focus:outline-none absolute top-[60px] z-10 origin-top-left  w-56  divide-y divide-gray-100 rounded-md bg-white shadow-lg border border-gray-200">
+            <Menu.Items className="dropdown-items">
               <div className="p-1 flex flex-col">
                 {/* eslint-disable-next-line react/prop-types */}
                 {links.map((item) => (
                   <Menu.Item>
-                    {({ active }) => (
                       <Link
-                        className={`flex flex-row gap-2 items-center justify-start ${active && 'bg-gray-100'} w-full rounded-md p-2`}
-                        href="/account-settings"
+                        className={`flex flex-row gap-2 items-center justify-start w-full rounded-md p-2`}
+                        href={item.href}
                       >
                         <span className="text-primary w-5">{item.icon}</span>
                         <span className="text-gray-400 ml-2 hover:text-primary">{item.name}</span>
                       </Link>
-                    )}
                   </Menu.Item>
                 ))}
               </div>

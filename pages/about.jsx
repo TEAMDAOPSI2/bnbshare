@@ -5,6 +5,7 @@ import Hero from '@/sections/about/Hero';
 import Worlds from '@/sections/about/Worlds';
 import ResponsibleInvesting from '@/sections/about/ResponsibleInvesting';
 import ReadyToGetSection from '@/sections/welcome/ReadyToGetSection';
+import Footer from '@/components/Footer';
 
 const About = () => {
   const router = useRouter();
@@ -19,6 +20,7 @@ const About = () => {
       <Worlds />
       <ResponsibleInvesting />
       <ReadyToGetSection />
+      <Footer />
     </>
   );
 };

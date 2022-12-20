@@ -40,7 +40,7 @@ const SliderElement = ({ img, icon, desc }) => (
 );
 
 const HowItWorks = () => {
-  const [currentSlide, setCurrentSlide] = useState(1);
+  const [currentSlide, setCurrentSlide] = useState(0);
   return (
     <section className="how-it-works">
       <div className="container pt-6 sm:py-6 px-3 mx-auto">
@@ -86,7 +86,7 @@ const HowItWorks = () => {
             >
               {currentSlide === 3 ? <div className="w-[40px] rounded-md h-1 bg-primary" /> : null}
               <h4>Exit</h4>
-              <p>Hold, exit or resell your stake in a way that suits your financial goals</p>
+              <p>Hold, exit or resell your Shares in a way that suits your financial goals</p>
             </div>
           </ReactWOW>
         </div>
@@ -114,7 +114,7 @@ const HowItWorks = () => {
               {currentSlide === 2 &&
                   'Sit back and track your income and investments online. We provide you with a monthly income statement and a dashboard to track your investments.'}
               {currentSlide === 3 &&
-                  'Hold, exit or resell your stake in a way that suits your financial goals. We offer a range of exit options to suit your needs.'}
+                  'Hold, exit or resell your shares in a way that suits your financial goals. We offer a range of exit options to suit your needs.'}
             </p>
           </div>
         </div>

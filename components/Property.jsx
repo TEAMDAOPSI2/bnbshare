@@ -126,7 +126,7 @@ const Property = () => {
           <div className="absolute top-2 left-2 flex flex-row">
             <div className="rounded-lg px-2 py-1  flex flex-row justify-between items-center bg-white">
               <img src="https://getstake.com/assets/flags/ae.png" alt="dubai flag" className="w-5 h-5 rounded-full" />
-              <span className="ml-1 text-sm font-medium">Dubai</span>
+              <span className="ml-1 text-sm font-medium">Bali</span>
             </div>
             <div className="rounded-lg px-2 py-1  flex flex-row justify-between items-center bg-white ml-3">
               <svg className="stroke-primary w-[20px]" viewBox="0 0 24 24" focusable="false" aria-label="user">

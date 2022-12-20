@@ -232,7 +232,7 @@ svg {
   }
 
   button.active {
-    @apply bg-emerald-500;
+    @apply bg-primary;
     @apply text-white;
   }
 }
@@ -254,4 +254,9 @@ svg {
       display: none;
     }
   }
+}
+
+.dropdown-items {
+  @apply focus:outline-none flex sm:absolute top-[60px] z-10 origin-top-left  w-56;
+  @apply divide-y divide-gray-100 rounded-md bg-transparent sm:bg-white shadow-lg border-0 sm:border border-gray-200;
 }
