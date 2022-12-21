@@ -1,4 +1,4 @@
-import MakeMoneyPropertiesImg from 'public/assets/home/makemoney/1-bed-burj.svg';
+import MakeMoneyPropertiesImg from 'public/assets/home/makemoney/photo.jpg';
 import MakeMoneyIco1 from 'public/assets/home/makemoney/new-property-value.svg';
 import MakeMoneyIco2 from 'public/assets/home/makemoney/new-monthly-cashflow.svg';
 import ReactWOW from 'react-wow';
@@ -52,7 +52,7 @@ const MakeMoneySection = () => (
               </svg>
               <span className="flex items-center font-medium">Rented</span>
             </div>
-            <img src={MakeMoneyPropertiesImg.src} alt="Make money properties" />
+            <img src={MakeMoneyPropertiesImg.src} className="w-[380px] h-[450px] object-cover rounded" alt="Make money properties" />
           </div>
         </ReactWOW>
         <ReactWOW animation="slideInUp" duration="1s">
