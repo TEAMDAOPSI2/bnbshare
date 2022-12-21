@@ -1,4 +1,4 @@
-import logo from 'public/assets/share-white.svg';
+import logo from 'public/assets/shares-logo-white.svg';
 import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
 import { faAngleUp } from '@fortawesome/free-solid-svg-icons';
 import { faFacebookSquare, faInstagram, faLinkedinIn, faTwitter } from '@fortawesome/free-brands-svg-icons';

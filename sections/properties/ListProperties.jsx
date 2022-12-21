@@ -16,7 +16,7 @@ const ListProperties = () => (
       </div>
     </div>
     <div className="container py-11 px-3 mx-auto">
-        <div className="grid gap-4 grid-cols-1 sm:grid-cols-3 mt-6">
+        <div className="grid gap-4 grid-cols-1 sm:grid-cols-3 mt-6 overflow-x-hidden">
             <Property/>
             <Property/>
             <Property/>

@@ -1,6 +1,6 @@
 import Link from 'next/link';
-import logo from 'public/assets/share-logo.svg';
-import logoWhite from 'public/assets/share-white.svg';
+import logo from 'public/assets/shares-logo.svg';
+import logoWhite from 'public/assets/shares-logo-white.svg';
 import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
 import { faHome, faStoreAlt, faChartLine, faBars, faClose } from '@fortawesome/free-solid-svg-icons';
 import DropDown from '@/components/navbar/DropDown';

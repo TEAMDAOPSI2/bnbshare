@@ -1,4 +1,4 @@
-import WholePropertyImg from 'public/assets/sell-with-stake/whole-property.png';
+import WholePropertyImg from 'public/assets/sell-with-stake/whole-properties.jpg';
 
 const PayCashSection = () => (
   <section className="py-12 sm:py-32">
@@ -17,7 +17,7 @@ const PayCashSection = () => (
           <button className="px-3 py-2 bg-primary rounded-md hover:bg-primary-hover text-white my-5 w-fit"> Sell with Shares</button>
         </div>
         <div>
-            <img className="rounded-md" src={WholePropertyImg.src} alt="Whole Property" />
+            <img className="rounded-md h-[430px] w-full object-cover object-bottom" src={WholePropertyImg.src} alt="Whole Property" />
         </div>
       </div>
     </div>
