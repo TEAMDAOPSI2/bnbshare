@@ -14,7 +14,7 @@ const Navbar = ({ pathName }) => {
     title: 'Sell',
     links: [
       { name: 'Sell with Shares', href: '/sell-with-shares', icon: <FontAwesomeIcon icon={faHome} /> },
-      { name: 'Sell transfer Facility', href: '/sell-shares', icon: <FontAwesomeIcon icon={faStoreAlt} /> },
+      { name: 'Sell transfer Facility', href: '/shares-secondary-transfer-facility', icon: <FontAwesomeIcon icon={faStoreAlt} /> },
     ],
   };
 

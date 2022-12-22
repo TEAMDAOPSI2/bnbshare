@@ -11,7 +11,7 @@ import PropertiesSection from '@/sections/welcome/PropertiesSection';
 import RewardsSection from '@/sections/welcome/RewardsSection';
 import BestAssetSection from '@/sections/welcome/BestAssetSection';
 import ReadyToGetSection from '@/sections/welcome/ReadyToGetSection';
-import Footer from "@/components/Footer";
+import Footer from '@/components/Footer';
 
 export default function Home() {
   return (
@@ -23,18 +23,18 @@ export default function Home() {
       </Head>
       <Navbar />
       <div className="">
-          <HeroSection />
-          <UserSection />
-          <HowItWorks />
-          <MakeMoneySection />
-          <FeaturesSection />
-          <InvestorsReviewSection />
-          <InvestmentCalculatorSection />
-          <PropertiesSection />
-          <RewardsSection />
-          <BestAssetSection />
-          <ReadyToGetSection />
-          <Footer/>
+        <HeroSection />
+        <UserSection />
+        <HowItWorks />
+        <MakeMoneySection />
+        <FeaturesSection />
+        <InvestorsReviewSection />
+        <InvestmentCalculatorSection />
+        <PropertiesSection />
+        <RewardsSection />
+        <BestAssetSection />
+        <ReadyToGetSection />
+        <Footer />
       </div>
     </div>
   );
