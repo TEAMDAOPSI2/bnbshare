@@ -2,11 +2,9 @@ import Slider from 'react-slick';
 import 'slick-carousel/slick/slick.css';
 import 'slick-carousel/slick/slick-theme.css';
 import ReactWOW from 'react-wow';
-import Villa1 from 'public/assets/properties/villa_1.jpg';
-import Villa2 from 'public/assets/properties/villa_2.jpg';
-import Villa3 from 'public/assets/properties/villa_3.jpg';
-import Villa4 from 'public/assets/properties/villa_4.jpg';
 import IDFlags from 'public/assets/Flag_of_Indonesia.png';
+// eslint-disable-next-line import/extensions
+import {dateFormat, numberFormat} from '@/utils/strings';
 
 const CustomNextArrow = (props) => {
   // eslint-disable-next-line react/prop-types
@@ -92,7 +90,9 @@ const CustomPrevArrow = (props) => {
   );
 };
 
-const Property = () => {
+const Property = (props) => {
+  // eslint-disable-next-line react/prop-types
+  const { property } = props;
   const settings = {
     dots: true,
     infinite: true,
@@ -110,16 +110,18 @@ const Property = () => {
           <div className="img-slider">
             {/* eslint-disable-next-line react/jsx-props-no-spreading */}
             <Slider {...settings}>
-              <img className="w-full h-[280px] object-cover rounded-t-md" src={Villa1.src} alt="listing 1" />
-              <img className="w-full h-[280px] object-cover rounded-t-md" src={Villa2.src} alt="listing 2" />
-              <img className="w-full h-[280px] object-cover rounded-t-md" src={Villa3.src} alt="listing 3" />
-              <img className="w-full h-[280px] object-cover rounded-t-md" src={Villa4.src} alt="listing 4" />
+              {
+                // eslint-disable-next-line react/prop-types
+                property.image_url.map((image) => (
+                  <img className="w-full h-[280px] object-cover rounded-t-md" src={image} alt="listing 1" />
+                ))
+              }
             </Slider>
           </div>
           <div className="absolute top-2 left-2 flex flex-row">
             <div className="rounded-lg px-2 py-1  flex flex-row justify-between items-center bg-white">
               <img src={IDFlags.src} alt="Indonesia flag" className="w-5 h-5 rounded-full" />
-              <span className="ml-1 text-sm font-medium">Bali</span>
+              <span className="ml-1 text-sm font-medium">{property?.city}</span>
             </div>
             <div className="rounded-lg px-2 py-1  flex flex-row justify-between items-center bg-white ml-3">
               <svg className="stroke-primary w-[20px]" viewBox="0 0 24 24" focusable="false" aria-label="user">
@@ -147,43 +149,44 @@ const Property = () => {
                   <path d="M5 20C5 17.5 7 15.6 9.4 15.6H14.5C17 15.6 18.9 17.6 18.9 20 M15 5.2C16.7 6.9 16.7 9.6 15 11.2C13.3 12.8 10.6 12.9 9.00001 11.2C7.40001 9.5 7.30001 6.8 9.00001 5.2C10.7 3.6 13.3 3.6 15 5.2" />
                 </g>
               </svg>
-              <span className="ml-1 text-sm font-medium">Rented</span>
+              <span className="ml-1 text-sm font-medium">{property?.status}</span>
             </div>
           </div>
         </div>
         <div className="py-3 px-5">
-          <h3 className="text-xl font-medium">1 Bed in Canggu, Bali.</h3>
+          <h3 className="text-xl font-medium">{`${property?.name} | ${property?.type_bed} | in ${property?.place}, ${property?.city} `}</h3>
           <div className="flex flex-row items-center gap-2">
             <p className="text-primary text-xl font-semibold grow-1">
-              <span className="text-base">USD</span> 560,000
+              <span className="text-base">USD</span> {numberFormat(property?.price_actual)}
             </p>
             <div className="flex flex-row grow items-center justify-end py-3">
               <div className="bg-gray-200 rounded-full h-2.5 bg-gray-300 w-[120px]">
-                <div className="bg-primary h-2.5 rounded-full" style={{ width: '45%' }} />
+                <div className="bg-primary h-2.5 rounded-full" style={{ width: `${property.percentage_status}%` }} />
               </div>
-              <p className="text-sm ml-1">45% founded</p>
+              <p className="text-sm ml-1">{property.percentage_status}% <span className="capitalize">{property.status}</span></p>
             </div>
           </div>
           <div className="grid gap-3 bg-gray-200 grid-cols-3 rounded-md p-2 my-3">
             <div className="p-1">
-              <p className="text-sm font-medium">56.82%</p>
-              <p className="text-sm text-gray-600">project return</p>
+              <p className="text-sm font-medium">{property.project_roi}%</p>
+              <p className="text-xs text-gray-600">project ROI(10y)</p>
             </div>
             <div className="p-1">
-              <p className="text-sm font-medium">6.82%</p>
-              <p className="text-sm text-gray-600">gross yield</p>
+              <p className="text-sm font-medium">{property.annual_roi}%</p>
+              <p className="text-xs text-gray-600">annual ROI</p>
             </div>
             <div className="p-1">
-              <p className="text-sm font-medium">30 Nov 2022</p>
-              <p className="text-sm text-gray-600">closed</p>
+              <p className="text-sm font-medium">{dateFormat(property.closed)}</p>
+              <p className="text-xs text-gray-600">closed</p>
             </div>
           </div>
+
           <div className="flex flex-row justify-between mt-5 mb-3">
             <p className="font-semibold">
-              <span className="font-light">Rent</span> USD 9,167.month
+              <span className="font-light">Rent</span> <span className="lowercase text-sm">usd</span> {property.price_rent_month}/Night
             </p>
-            <p className="font-semibold">
-              <span className="font-light">Distributed</span> Monthly
+            <p className="font-semibold capitalize">
+              <span className="lowercase text-sm">usd</span> {numberFormat(property.price_distribution)} <span className="font-light">Distributed</span> {property.distribution}
             </p>
           </div>
         </div>

@@ -37,7 +37,7 @@ const Footer = () => (
     <div className="container pt-10 px-3 mx-auto">
       <div className="flex justify-between flex-row">
         <div className="flex flex-col">
-          <img src={logo.src} alt="BNBShares" className="w-28" />
+          <img src={logo.src} alt="shares" className="w-28" />
           <p className="text-white">Office heart of Canggu, Bali</p>
         </div>
         <div>
