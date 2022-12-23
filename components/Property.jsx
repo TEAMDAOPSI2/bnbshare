@@ -163,7 +163,7 @@ const Property = (props) => {
               <div className="bg-gray-200 rounded-full h-2.5 bg-gray-300 w-[120px]">
                 <div className="bg-primary h-2.5 rounded-full" style={{ width: `${property?.percentage_status}%` }} />
               </div>
-              <p className="text-sm ml-1">{property?.percentage_status}% <span className="capitalize">{property.status}</span></p>
+              <p className="text-sm ml-1">{property?.percentage_status}% <span className="capitalize">{property?.status}</span></p>
             </div>
           </div>
           <div className="grid gap-3 bg-gray-200 grid-cols-3 rounded-md p-2 my-3">
