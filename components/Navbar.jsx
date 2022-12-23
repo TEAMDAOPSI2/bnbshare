@@ -126,7 +126,7 @@ const Navbar = ({ pathName }) => {
         </div>
       </div>
       {isOpen && (
-        <div className="fixed z-30 bg-gray-800 w-[100%] h-[100vh] left-0 top-0 text-white transition ease-in duration-75">
+        <div className="fixed z-[99999] bg-gray-800 w-[100%] h-[100vh] left-0 top-0 text-white transition ease-in duration-75">
           <div className="flex w-full h-full flex-col justify-between">
             <div className="flex justify-between w-full flex-col">
               <div className="flex flex-row items-center justify-between w-full p-3 border-b border-gray-600">

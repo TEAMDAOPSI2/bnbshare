@@ -154,7 +154,7 @@ const Property = (props) => {
           </div>
         </div>
         <div className="py-3 px-5">
-          <h3 className="text-xl font-medium">{`${property?.name} | ${property?.type_bed} | in ${property?.place}, ${property?.city} `}</h3>
+          <h3 className="text-xl font-medium">{`${property?.name} | ${property?.type_bed} | ${property?.place}`}</h3>
           <div className="flex flex-row items-center gap-2">
             <p className="text-primary text-xl font-semibold grow-1">
               <span className="text-base">USD</span> {numberFormat(property?.price_actual)}
