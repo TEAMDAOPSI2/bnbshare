@@ -161,32 +161,32 @@ const Property = (props) => {
             </p>
             <div className="flex flex-row grow items-center justify-end py-3">
               <div className="bg-gray-200 rounded-full h-2.5 bg-gray-300 w-[120px]">
-                <div className="bg-primary h-2.5 rounded-full" style={{ width: `${property.percentage_status}%` }} />
+                <div className="bg-primary h-2.5 rounded-full" style={{ width: `${property?.percentage_status}%` }} />
               </div>
-              <p className="text-sm ml-1">{property.percentage_status}% <span className="capitalize">{property.status}</span></p>
+              <p className="text-sm ml-1">{property?.percentage_status}% <span className="capitalize">{property.status}</span></p>
             </div>
           </div>
           <div className="grid gap-3 bg-gray-200 grid-cols-3 rounded-md p-2 my-3">
             <div className="p-1">
-              <p className="text-sm font-medium">{property.project_roi}%</p>
+              <p className="text-sm font-medium">{property?.project_roi}%</p>
               <p className="text-xs text-gray-600">project ROI(10y)</p>
             </div>
             <div className="p-1">
-              <p className="text-sm font-medium">{property.annual_roi}%</p>
+              <p className="text-sm font-medium">{property?.annual_roi}%</p>
               <p className="text-xs text-gray-600">annual ROI</p>
             </div>
             <div className="p-1">
-              <p className="text-sm font-medium">{dateFormat(property.closed)}</p>
+              <p className="text-sm font-medium">{dateFormat(property?.closed)}</p>
               <p className="text-xs text-gray-600">closed</p>
             </div>
           </div>
 
           <div className="flex flex-row justify-between mt-5 mb-3">
             <p className="font-semibold">
-              <span className="font-light">Rent</span> <span className="lowercase text-sm">usd</span> {property.price_rent_month}/Night
+              <span className="font-light">Rent</span> <span className="lowercase text-sm">usd</span> {property?.price_rent_month}/Night
             </p>
             <p className="font-semibold capitalize">
-              <span className="lowercase text-sm">usd</span> {numberFormat(property.price_distribution)} <span className="font-light">Distributed</span> {property.distribution}
+              <span className="lowercase text-sm">usd</span> {numberFormat(property?.price_distribution)} <span className="font-light">Distributed</span> {property?.distribution}
             </p>
           </div>
         </div>
