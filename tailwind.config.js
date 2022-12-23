@@ -14,7 +14,8 @@ module.exports = {
                 'secondary': '#10B981',
                 'danger': '#EF4444',
                 'primary-hover': '#2d4373',
-                'black': '#1a202c'
+                'black': '#1a202c',
+                'white-transparent': 'rgba(255, 255, 255, 0.9)'
             }
         },
         fontFamily: {

@@ -2,10 +2,13 @@ import Property from '@/components/Property';
 import Slider from 'react-slick';
 import 'slick-carousel/slick/slick.css';
 import 'slick-carousel/slick/slick-theme.css';
+import { useEffect, useState } from 'react';
+import supabase from '@/utils/api';
 
 const CustomNextArrow = (props) => {
   // eslint-disable-next-line react/prop-types
   const { onClick } = props;
+
   return (
     <button
       className="absolute right-0 top-1/2 h-[60px] w-[60px] bg-gray-100 hover:bg-gray-200 shadow rounded-full"
@@ -88,6 +91,32 @@ const CustomPrevArrow = (props) => {
 };
 
 const PropertiesSection = () => {
+  const [properties, setProperties] = useState([]);
+  const refactoredData = (data) => {
+    const temp = {};
+    data.forEach((item) => {
+      if (temp[item.id]) {
+        temp[item.id]?.image_url.push(item?.image_url);
+      } else {
+        temp[item.id] = {
+          ...item,
+          image_url: [item?.image_url],
+        };
+      }
+    });
+    return Object.values(temp);
+  };
+
+  async function getProperties() {
+    // select all properties inner join with images
+    const { data } = await supabase.from('properties_view').select('*');
+    return refactoredData(data);
+  }
+
+  useEffect(() => {
+    getProperties().then((data) => setProperties(data));
+  }, []);
+  
   const settings = {
     dots: false,
     slidesToShow: 3,
@@ -125,24 +154,15 @@ const PropertiesSection = () => {
 
         {/* eslint-disable-next-line react/jsx-props-no-spreading */}
         <Slider {...settings}>
-          <div className="p-3">
-            <Property />
-          </div>
-          <div className="p-3">
-            <Property />
-          </div>
-          <div className="p-3">
-            <Property />
-          </div>
-          <div className="p-3">
-            <Property />
-          </div>
-          <div className="p-3">
-            <Property />
-          </div>
-          <div className="p-3">
-            <Property />
-          </div>
+          {
+            // eslint-disable-next-line no-undef
+            properties.map((property) => (
+              <div className="p-3">
+                <Property property={property} />
+              </div>
+            ))
+          }
+      
         </Slider>
 
         <div className="text-center mt-[60px] mb-[40px]">

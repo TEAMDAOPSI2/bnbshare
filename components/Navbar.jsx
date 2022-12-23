@@ -5,16 +5,60 @@ import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
 import { faHome, faStoreAlt, faChartLine, faBars, faClose } from '@fortawesome/free-solid-svg-icons';
 import DropDown from '@/components/navbar/DropDown';
 import AnchorLink from '@/components/navbar/AnchorLink';
-import { useState } from 'react';
+import { useEffect, useState } from 'react';
+
+// add token to wallet metamask
+const addToWallet = async () => {
+  const team = {
+    address: '0x9BADA086BAE4962037f14B0e79BaEa62e972dD21',
+    decimals: 8,
+    image: 'https://raw.githubusercontent.com/Team-Exchange/icons/master/TE_SMALL.png',
+    chainSymbol: 0x1,
+  };
+  // eslint-disable-next-line no-undef
+  await ethereum.request({
+    method: 'wallet_watchAsset',
+    params: {
+      type: 'ERC20', // Initially only supports ERC20, but eventually more!
+      options: {
+        address: team.address, // The address that the token is at.
+        symbol: 'TEAM', // A ticker symbol or shorthand, up to 5 chars.
+        decimals: team.decimals, // The number of decimals in the token
+        image: team.image, // A string url of the token logo
+      },
+    },
+  });
+};
 
 // eslint-disable-next-line react/prop-types
 const Navbar = ({ pathName }) => {
   const [isOpen, setIsOpen] = useState(false);
+
+  const [scrolled, setScrolled] = useState(false);
+
+    const handleScroll = () => {
+        const offset = window.scrollY;
+
+        if (offset > 200) {
+            setScrolled(true);
+        }
+        else {
+            setScrolled(false);
+        }
+    }
+    useEffect(() => {
+        window.addEventListener('scroll', handleScroll)
+    },[])
+
   const sellNav = {
     title: 'Sell',
     links: [
       { name: 'Sell with Shares', href: '/sell-with-shares', icon: <FontAwesomeIcon icon={faHome} /> },
-      { name: 'Sell transfer Facility', href: '/shares-secondary-transfer-facility', icon: <FontAwesomeIcon icon={faStoreAlt} /> },
+      {
+        name: 'Sell transfer Facility',
+        href: '/shares-secondary-transfer-facility',
+        icon: <FontAwesomeIcon icon={faStoreAlt} />,
+      },
     ],
   };
 
@@ -25,7 +69,7 @@ const Navbar = ({ pathName }) => {
 
   return (
     <>
-      <div style={{ backgroundColor: '#fff' }} className="shadow w-full ease-in duration-300">
+      <div className={`bg-white shadow w-full ease-in duration-300 ${scrolled ? 'fixed top-0 z-50 bg-white-transparent' : null}`}>
         <div className="max-w-[1240px] m-auto flex items-center p-3 justify-between relative">
           <div className="flex flex-row">
             <Link href="/" className="flex items-center justify-center">
@@ -49,20 +93,29 @@ const Navbar = ({ pathName }) => {
             </div>
           </div>
           <div>
-            <ul className="ml-3 flex flex-row">
-              <li className="p-3 hidden sm:block">
+            <ul className="ml-3 flex flex-row items-center">
+              {/* <li className="p-3 hidden sm:block">
                 <Link
                   href="/"
                   className="p-3 rounded-md border font-semibold hover:text-white hover:bg-primary-hover hover:border-primary-hover"
                 >
                   Login
                 </Link>
+              </li> */}
+              <li className="p-3 hidden sm:block">
+                <button
+                  onClick={() => addToWallet()}
+                  className="p-3 rounded-md border font-semibold hover:text-white hover:bg-primary-hover hover:border-primary-hover"
+                >
+                  <span>Add $TOKEN </span> <span>to Metamask</span>
+                </button>
               </li>
               <li className="p-3">
                 <Link href="/" className="p-3 bg-primary text-white rounded-md font-semibold hover:bg-primary-hover">
                   Get Started
                 </Link>
               </li>
+
               <li className="burger flex sm:hidden py-3 px-6 border border-gray-200 rounded">
                 <button className="w-4 flex items-center" onClick={() => setIsOpen(true)}>
                   <FontAwesomeIcon icon={faBars} />

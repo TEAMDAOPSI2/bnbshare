@@ -1,13 +1,12 @@
 import logo from 'public/assets/shares-logo-white.svg';
 import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
 import { faAngleUp } from '@fortawesome/free-solid-svg-icons';
-import { faFacebookSquare, faInstagram, faLinkedinIn, faTwitter } from '@fortawesome/free-brands-svg-icons';
+import { faAirbnb, faFacebookSquare, faInstagram, faLinkedinIn, faTwitter } from '@fortawesome/free-brands-svg-icons';
+import BookingICO from 'public/assets/social/bookingcom-1.svg';
 import Link from 'next/link';
 
 // eslint-disable-next-line react/prop-types
-const MenuList = ({ children }) => {
-  return <div className="flex flex-col">{children}</div>;
-};
+const MenuList = ({ children }) => <div className="flex flex-col">{children}</div>;
 
 const ListLink = (props) => {
   // eslint-disable-next-line react/prop-types
@@ -66,17 +65,23 @@ const Footer = () => (
           <h3 className="font-semibold py-3">Connect with us</h3>
           <ListLink href="mailto:">contact@shares.villas</ListLink>
           <div className="flex flex-row gap-2">
-            <LinkSocial href="https://www.facebook.com/">
+            <LinkSocial href="https://www.facebook.com/shares.villas">
               <FontAwesomeIcon className="w-3" icon={faFacebookSquare} />
             </LinkSocial>
-            <LinkSocial href="https://twitter.com/">
+            <LinkSocial href="https://twitter.com/shares.villas">
               <FontAwesomeIcon className="w-3" icon={faTwitter} />
             </LinkSocial>
-            <LinkSocial href="https://twitter.com/">
+            <LinkSocial href="https://linkedin.com/shares.villas">
               <FontAwesomeIcon className="w-3" icon={faLinkedinIn} />
             </LinkSocial>
-            <LinkSocial href="https://twitter.com/">
+            <LinkSocial href="https://instagram.com/shares.villas">
               <FontAwesomeIcon className="w-3" icon={faInstagram} />
+            </LinkSocial>
+            <LinkSocial href="https://www.airbnb.com/users/show/shares.villas">
+              <FontAwesomeIcon className="w-3" icon={faAirbnb} />
+            </LinkSocial>
+            <LinkSocial href="https://booking.com/shares.villas">
+              <img src={BookingICO.src} alt="booking" className="w-3" />
             </LinkSocial>
           </div>
         </MenuList>
