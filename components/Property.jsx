@@ -4,7 +4,7 @@ import 'slick-carousel/slick/slick-theme.css';
 import ReactWOW from 'react-wow';
 import IDFlags from 'public/assets/Flag_of_Indonesia.png';
 // eslint-disable-next-line import/extensions
-import {dateFormat, numberFormat} from '@/utils/strings';
+import { dateFormat, numberFormat } from '@/utils/strings';
 
 const CustomNextArrow = (props) => {
   // eslint-disable-next-line react/prop-types
@@ -149,7 +149,7 @@ const Property = (props) => {
                   <path d="M5 20C5 17.5 7 15.6 9.4 15.6H14.5C17 15.6 18.9 17.6 18.9 20 M15 5.2C16.7 6.9 16.7 9.6 15 11.2C13.3 12.8 10.6 12.9 9.00001 11.2C7.40001 9.5 7.30001 6.8 9.00001 5.2C10.7 3.6 13.3 3.6 15 5.2" />
                 </g>
               </svg>
-              <span className="ml-1 text-sm font-medium">{property?.status}</span>
+              <span className="ml-1 text-sm font-medium capitalize">{property?.status}</span>
             </div>
           </div>
         </div>
@@ -163,17 +163,19 @@ const Property = (props) => {
               <div className="bg-gray-200 rounded-full h-2.5 bg-gray-300 w-[120px]">
                 <div className="bg-primary h-2.5 rounded-full" style={{ width: `${property?.percentage_status}%` }} />
               </div>
-              <p className="text-sm ml-1">{property?.percentage_status}% <span className="capitalize">{property?.status}</span></p>
+              <p className="text-sm ml-1">
+                {property?.percentage_status}% <span className="capitalize">{property?.status}</span>
+              </p>
             </div>
           </div>
           <div className="grid gap-3 bg-gray-200 grid-cols-3 rounded-md p-2 my-3">
             <div className="p-1">
-              <p className="text-sm font-medium">{property?.project_roi}%</p>
+              <p className="text-sm font-medium">+{property?.project_roi}%</p>
               <p className="text-xs text-gray-600">project ROI(10y)</p>
             </div>
             <div className="p-1">
-              <p className="text-sm font-medium">{property?.annual_roi}%</p>
-              <p className="text-xs text-gray-600">annual ROI</p>
+              <p className="text-sm font-medium">+{property?.annual_roi}%</p>
+              <p className="text-xs text-gray-600">annual ROI(1y)</p>
             </div>
             <div className="p-1">
               <p className="text-sm font-medium">{dateFormat(property?.closed)}</p>
@@ -182,12 +184,22 @@ const Property = (props) => {
           </div>
 
           <div className="flex flex-row justify-between mt-5 mb-3">
-            <p className="font-semibold">
-              <span className="font-light">Rent</span> <span className="lowercase text-sm">usd</span> {property?.price_rent_month}/Night
-            </p>
-            <p className="font-semibold capitalize">
-              <span className="lowercase text-sm">usd</span> {numberFormat(property?.price_distribution)} <span className="font-light">Distributed</span> {property?.distribution}
-            </p>
+            <div className="font-semibold flex flex-col">
+              <div>
+                <p className="font-light mr-1">Rent Daily</p>
+              </div>
+              <div>
+                <span className="lowercase">usd</span> {property?.price_rent_month}
+              </div>
+            </div>
+            <div className="font-semibold capitalize flex flex-col">
+              <div>
+                <span className="font-light">Distribution {property?.distribution}</span> 
+              </div>
+              <div>
+                <span className="lowercase">usd</span> {numberFormat(property?.price_distribution)}
+              </div>
+            </div>
           </div>
         </div>
       </div>

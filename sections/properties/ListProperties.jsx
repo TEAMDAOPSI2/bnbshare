@@ -35,7 +35,7 @@ const ListProperties = () => {
   return (
     <section className="relative">
       <div className="w-full absolute -top-8">
-        <div className="md:max-w-[460px] bg-white grid grid-cols-3 gap-2 shadow rounded-full p-2 mx-auto">
+        <div className="md:max-w-[460px] bg-white grid grid-cols-2 gap-2 shadow rounded-full p-2 mx-auto">
           <button
             onClick={() => setStatus('available')}
             className={`${
@@ -52,14 +52,7 @@ const ListProperties = () => {
           >
             Funded
           </button>
-          <button
-            onClick={() => setStatus('exited')}
-            className={`${
-              status === 'exited' ? 'bg-primary text-white' : 'bg-white text-black'
-            } py-3 px-6 rounded-full hover:text-white transition ease-in-out duration-150 hover:bg-primary-hover`}
-          >
-            Exited
-          </button>
+          
         </div>
       </div>
       <div className="container py-11 px-3 mx-auto overflow-x-hidden">
