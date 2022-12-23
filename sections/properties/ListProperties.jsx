@@ -9,7 +9,7 @@ const ListProperties = () => {
     const temp = {};
     data.forEach((item) => {
       if (temp[item.id]) {
-        temp[item.id].image_url.push(item?.image_url);
+        temp[item.id]?.image_url.push(item?.image_url);
       } else {
         temp[item.id] = {
           ...item,

@@ -112,7 +112,7 @@ const Property = (props) => {
             <Slider {...settings}>
               {
                 // eslint-disable-next-line react/prop-types
-                property.image_url.map((image) => (
+                property?.image_url.map((image) => (
                   <img className="w-full h-[280px] object-cover rounded-t-md" src={image} alt="listing 1" />
                 ))
               }
