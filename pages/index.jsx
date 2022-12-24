@@ -23,9 +23,9 @@ export default function Home() {
       </Head>
       <Navbar />
       <div className="">
+        <PropertiesSection />
         <HeroSection />
         <UserSection />
-        <PropertiesSection />
         <HowItWorks />
         <MakeMoneySection />
         <FeaturesSection />
