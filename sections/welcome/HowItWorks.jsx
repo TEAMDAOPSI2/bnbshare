@@ -119,7 +119,7 @@ const HowItWorks = () => {
           </div>
         </div>
       </div>
-      <div className="scroll bg-[#121C30] mt-12 h-[450px] w-full flex items-center justify-center">
+      <div className="scroll bg-[#121C30] mt-12 h-[450px] w-full hidden sm:flex items-center justify-center">
         <div className="w-full h-full">
           {/* make slider */}
           {currentSlide === 0 && (
