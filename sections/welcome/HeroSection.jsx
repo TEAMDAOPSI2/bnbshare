@@ -1,5 +1,3 @@
-import BannerPhoneImg from 'public/assets/home/banner/banner-phone.svg';
-import IphoneBorderImg from 'public/assets/common/iphone-13-pro-frame.png';
 import AppStore from 'public/assets/app-store.svg';
 import GooglePlay from 'public/assets/play-store.svg';
 import ReactWOW from 'react-wow';
@@ -7,7 +5,7 @@ import ReactWOW from 'react-wow';
 const HeroSection = () => (
   <section className="hero-welcome">
     <div className="clip-path" />
-    <div className="container py-12 px-3 mx-auto">
+    <div className="container py-8 px-3 mx-auto">
       <div className="flex flex-col sm:flex-row">
         <div className="sm:basis-[45%] basis-[100%]">
           <div className="flex h-full justify-center flex-col gap-3">
@@ -45,14 +43,12 @@ const HeroSection = () => (
             </ReactWOW>
           </div>
         </div>
-        <div className=" basis-[100%] sm:basis-[55%] relative flex inset-0 justify-end w-[100%] h-[700px]">
-          <div className="h-[710px] sm:h-[200px]" />
+        <div className="basis-[100%] sm:basis-[55%] relative flex inset-0 items-center justify-end w-[100%] h-[650px]">
           <div className="absolute z-20 w-[300px] right-1/2 translate-x-1/2">
             <ReactWOW animation="slideInUp" duration="1s">
-              <img className="h-[650px] w-full rounded-[60px]" src={BannerPhoneImg.src} alt="Banner Phone" />
-              <picture className="absolute top-0">
-                <img className="h-[650px] w-full" src={IphoneBorderImg.src} alt="Iphone Border" />
-              </picture>
+              <video className="w-full h-[450px] rounded-[60px]" autoPlay loop muted>
+                <source src="assets/home/hero.mov" type="video/mp4" />
+              </video>
             </ReactWOW>
           </div>
         </div>

@@ -5,6 +5,10 @@ import ReactWOW from 'react-wow';
 import IDFlags from 'public/assets/Flag_of_Indonesia.png';
 // eslint-disable-next-line import/extensions
 import { dateFormat, numberFormat } from '@/utils/strings';
+import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
+import BookingICO from 'public/assets/social/bookingcom-1.svg';
+import MetamaskICO from 'public/assets/social/metamask-icon.svg';
+import { faAirbnb } from '@fortawesome/free-brands-svg-icons';
 
 const CustomNextArrow = (props) => {
   // eslint-disable-next-line react/prop-types
@@ -160,7 +164,7 @@ const Property = (props) => {
               <span className="text-base">USD</span> {numberFormat(property?.price_actual)}
             </p>
             <div className="flex flex-row grow items-center justify-end py-3">
-              <div className="bg-gray-200 rounded-full h-2.5 bg-gray-300 w-[120px]">
+              <div className="bg-gray-200 rounded-full h-2.5 w-[120px]">
                 <div className="bg-primary h-2.5 rounded-full" style={{ width: `${property?.percentage_status}%` }} />
               </div>
               <p className="text-sm ml-1">
@@ -188,16 +192,21 @@ const Property = (props) => {
               <div>
                 <p className="font-light mr-1">Rent Daily</p>
               </div>
-              <div>
+              <div className='flex flex-row'>
                 <span className="lowercase">usd</span> {property?.price_rent_month}
+                <span className='flex flex-row'>
+                  <FontAwesomeIcon icon={faAirbnb} className="ml-1 w-3" />
+                  <img src={BookingICO.src} alt="" className='ml-1 w-3' />
+                </span>
               </div>
             </div>
             <div className="font-semibold capitalize flex flex-col">
               <div>
-                <span className="font-light">Distribution {property?.distribution}</span> 
+                <span className="font-light">Distribution {property?.distribution}</span>
               </div>
-              <div>
+              <div className='flex flex-row'>
                 <span className="lowercase">usd</span> {numberFormat(property?.price_distribution)}
+                <img src={MetamaskICO.src} alt="" className='ml-1 w-3' />
               </div>
             </div>
           </div>
