@@ -33,22 +33,54 @@ const addToWallet = async () => {
 // eslint-disable-next-line react/prop-types
 const Navbar = ({ pathName }) => {
   const [isOpen, setIsOpen] = useState(false);
-
   const [scrolled, setScrolled] = useState(false);
+  const [currentAccount, setCurrentAccount] = useState(null);
 
-    const handleScroll = () => {
-        const offset = window.scrollY;
+  const handleScroll = () => {
+    const offset = window.scrollY;
 
-        if (offset > 200) {
-            setScrolled(true);
-        }
-        else {
-            setScrolled(false);
-        }
+    if (offset > 200) {
+      setScrolled(true);
+    } else {
+      setScrolled(false);
     }
-    useEffect(() => {
-        window.addEventListener('scroll', handleScroll)
-    },[])
+  };
+
+  const connectWallet = async () => {
+    try {
+      // eslint-disable-next-line no-undef
+      const accounts = await ethereum.request({ method: 'eth_requestAccounts' });
+      const account = accounts[0];
+      setCurrentAccount(account);
+    } catch (err) {
+      throw new Error(err);
+    }
+  };
+
+  const ifWalletConnected = async () => {
+    try {
+      const { ethereum } = window;
+      if (!ethereum) {
+        console.log('No ethereum found');
+      } else {
+        console.log('Ethereum found', ethereum);
+      }
+      // check if authorized using wallet connect
+      const accounts = await ethereum.request({ method: 'eth_accounts' });
+
+      if (accounts.length !== 0) {
+        const account = accounts[0];
+        setCurrentAccount(account);
+      }
+    } catch (err) {
+      throw new Error(err);
+    }
+  };
+
+  useEffect(() => {
+    window.addEventListener('scroll', handleScroll);
+    ifWalletConnected();
+  }, []);
 
   const sellNav = {
     title: 'Sell',
@@ -69,7 +101,11 @@ const Navbar = ({ pathName }) => {
 
   return (
     <>
-      <div className={`bg-white shadow w-full ease-in duration-300 ${scrolled ? 'fixed top-0 z-50 bg-white-transparent' : null}`}>
+      <div
+        className={`bg-white shadow w-full ease-in duration-300 ${
+          scrolled ? 'fixed top-0 z-50 bg-white-transparent' : null
+        }`}
+      >
         <div className="max-w-[1240px] m-auto flex items-center p-3 justify-between relative">
           <div className="flex flex-row">
             <Link href="/" className="flex items-center justify-center">
@@ -107,13 +143,13 @@ const Navbar = ({ pathName }) => {
                   onClick={() => addToWallet()}
                   className="p-3 rounded-md border font-semibold hover:text-white hover:bg-primary-hover hover:border-primary-hover"
                 >
-                  <span>Add $TOKEN </span> <span>to Metamask</span>
+                  <span>Add NFT </span> <span>to Metamask</span>
                 </button>
               </li>
               <li className="p-3">
-                <Link href="/" className="p-3 bg-primary text-white rounded-md font-semibold hover:bg-primary-hover">
-                  Get Started
-                </Link>
+                <button onClick={connectWallet} className="p-3 bg-primary text-white rounded-md font-semibold hover:bg-primary-hover">
+                  {currentAccount ? (`${currentAccount.slice(0, 6)}...${currentAccount.slice(-4)}`) : (`Connect Wallet`)}
+                </button>
               </li>
 
               <li className="burger flex sm:hidden py-3 px-6 border border-gray-200 rounded">

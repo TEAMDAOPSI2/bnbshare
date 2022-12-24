@@ -1,13 +1,11 @@
-import AppStore from 'public/assets/app-store.svg';
-import GooglePlay from 'public/assets/play-store.svg';
 import ReactWOW from 'react-wow';
 
 const HeroSection = () => (
   <section className="hero-welcome">
     <div className="clip-path" />
     <div className="container py-8 px-3 mx-auto">
-      <div className="flex flex-col sm:flex-row">
-        <div className="sm:basis-[45%] basis-[100%]">
+      <div className="flex flex-col sm:flex-row min-h-[750px] sm:min-h-[450px]">
+        <div className="md:w-[45%]">
           <div className="flex h-full justify-center flex-col gap-3">
             <ReactWOW animation="slideInUp" duration="1s">
               <h1 className="text-4xl font-bold font-sans">The modern way for anyone to invest in real estate</h1>
@@ -31,22 +29,12 @@ const HeroSection = () => (
                 <span className="ml-2">Hot it works</span>
               </button>
             </ReactWOW>
-            <ReactWOW animation="slideInDown" duration="1s">
-              <div className="flex flex-row gap-3 mb-6">
-                <a href="#">
-                  <img src={AppStore.src} alt="app store" />
-                </a>
-                <a href="#">
-                  <img src={GooglePlay.src} alt="google play" />
-                </a>
-              </div>
-            </ReactWOW>
           </div>
         </div>
-        <div className="basis-[100%] sm:basis-[55%] relative flex inset-0 items-center justify-end w-[100%] h-[650px]">
-          <div className="absolute z-20 w-[300px] right-1/2 translate-x-1/2">
+        <div className="relative flex items-center justify-end md:w-[55%] sm:h-[650px] h-[550px]">
+          <div className="absolute z-20 w-full">
             <ReactWOW animation="slideInUp" duration="1s">
-              <video className="w-full h-[450px] rounded-[60px]" autoPlay loop muted>
+              <video className="sm:w-full w-[80%] mx-auto h-[450px] rounded-[60px]" autoPlay loop muted>
                 <source src="assets/home/hero.mov" type="video/mp4" />
               </video>
             </ReactWOW>

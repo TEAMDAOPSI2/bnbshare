@@ -2,7 +2,7 @@ import HowItWorksImg1 from 'public/assets/home/howitworks/1.svg';
 import HowItWorksImg2 from 'public/assets/home/howitworks/2.svg';
 import HowItWorksImg3 from 'public/assets/home/howitworks/3.svg';
 import HowItWorksImg4 from 'public/assets/home/howitworks/4.svg';
-import IphoneBorderImg from 'public/assets/common/iphone-13-pro-frame.png';
+// import IphoneBorderImg from 'public/assets/common/iphone-13-pro-frame.png';
 import HowItWorksIcon1 from 'public/assets/home/howitworks/1.icon.svg';
 import HowItWorksIcon2 from 'public/assets/home/howitworks/2.icon.svg';
 import HowItWorksIcon3 from 'public/assets/home/howitworks/3.icon.svg';
@@ -19,17 +19,17 @@ const SliderElement = ({ img, icon, desc }) => (
         {desc}
       </div>
     </ReactWOW>
-    <ReactWOW animation="slideInRight" duration="1s">
-      <div className="phone w-full relative">
-        <div className="absolute z-1 w-[450px] flex items-center justify-center">
-          {/* eslint-disable-next-line react/prop-types */}
-          <img className="w-[380px] rounded-[60px]" src={img.src} alt="Banner Phone" />
-          <picture className="absolute top-0 mx-auto">
-            <img alt="how it works" className="w-[382px] mx-auto" src={IphoneBorderImg.src} />
-          </picture>
-        </div>
-      </div>
-    </ReactWOW>
+    {/* <ReactWOW animation="slideInRight" duration="1s"> */}
+    {/* <div className="phone w-full relative"> */}
+    {/* <div className="absolute z-1 w-[450px] flex items-center justify-center"> */}
+    {/* eslint-disable-next-line react/prop-types */}
+    {/* <img className="w-[380px] rounded-[60px]" src={img.src} alt="Banner Phone" /> */}
+    {/* <picture className="absolute top-0 mx-auto"> */}
+    {/* <img alt="how it works" className="w-[382px] mx-auto" src={IphoneBorderImg.src} /> */}
+    {/* </picture> */}
+    {/* </div> */}
+    {/* </div> */}
+    {/* </ReactWOW> */}
     <ReactWOW animation="zoomInRight" duration="1s">
       <div className="ico invisible sm:visible">
         {/* eslint-disable-next-line react/prop-types */}
@@ -108,13 +108,13 @@ const HowItWorks = () => {
           <div className="py-6 block sm:hidden">
             <p className="py-3">
               {currentSlide === 0 &&
-                  'Our team of property professionals combine a data driven valuation and analysis process with over 20 years of leadership experience at the top real estate companies in Bali, to source the best rental properties with the highest investment potential for you.'}
+                'Our team of property professionals combine a data driven valuation and analysis process with over 20 years of leadership experience at the top real estate companies in Bali, to source the best rental properties with the highest investment potential for you.'}
               {currentSlide === 1 &&
-                  'Buy a piece of the ones you love, starting from only USD 500. We offer a range of investment options to suit your financial goals.'}
+                'Buy a piece of the ones you love, starting from only USD 500. We offer a range of investment options to suit your financial goals.'}
               {currentSlide === 2 &&
-                  'Sit back and track your income and investments online. We provide you with a monthly income statement and a dashboard to track your investments.'}
+                'Sit back and track your income and investments online. We provide you with a monthly income statement and a dashboard to track your investments.'}
               {currentSlide === 3 &&
-                  'Hold, exit or resell your shares in a way that suits your financial goals. We offer a range of exit options to suit your needs.'}
+                'Hold, exit or resell your shares in a way that suits your financial goals. We offer a range of exit options to suit your needs.'}
             </p>
           </div>
         </div>
