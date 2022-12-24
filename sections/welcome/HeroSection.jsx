@@ -12,7 +12,7 @@ const HeroSection = () => (
             </ReactWOW>
             <ReactWOW animation="slideInUp" duration="1s">
               <p className="text-muted">
-              Digitally invest in prime rental properties from only USD 100, no matter where you are in the world!
+                Digitally invest in prime rental properties from only USD 1,000 no matter where you are in the world!
               </p>
             </ReactWOW>
             <ReactWOW animation="slideInDown" duration="1s">
