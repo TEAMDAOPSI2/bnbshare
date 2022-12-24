@@ -25,12 +25,12 @@ export default function Home() {
       <div className="">
         <HeroSection />
         <UserSection />
+        <PropertiesSection />
         <HowItWorks />
         <MakeMoneySection />
         <FeaturesSection />
         <InvestorsReviewSection />
         <InvestmentCalculatorSection />
-        <PropertiesSection />
         <RewardsSection />
         <BestAssetSection />
         <ReadyToGetSection />
