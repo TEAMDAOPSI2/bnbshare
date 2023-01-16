@@ -124,6 +124,11 @@ const Navbar = ({ pathName }) => {
               >
                 About
               </AnchorLink>
+              <AnchorLink
+                  href="https://etherscan.io/address/0x5308d43a01230874d98dceabde720af303a27c2c"
+              >
+                sharesvillas.eth
+              </AnchorLink>
               <DropDown props={sellNav} />
               <DropDown props={LearnNav} />
             </div>
