@@ -9,6 +9,7 @@ import HowItWorksIcon3 from 'public/assets/home/howitworks/3.icon.svg';
 import HowItWorksIcon4 from 'public/assets/home/howitworks/4.icon.svg';
 import ReactWOW from 'react-wow';
 import { useState } from 'react';
+import { useTranslation } from 'next-i18next';
 
 // eslint-disable-next-line react/prop-types
 const SliderElement = ({ img, icon, desc }) => (
@@ -41,12 +42,13 @@ const SliderElement = ({ img, icon, desc }) => (
 
 const HowItWorks = () => {
   const [currentSlide, setCurrentSlide] = useState(0);
+  const { t } = useTranslation();
   return (
     <section className="how-it-works">
       <div className="container pt-6 sm:py-6 px-3 mx-auto">
         <div className="text-center mb-6">
-          <h2 className="text-4xl py-3 font-semibold">How it works</h2>
-          <p className="font-medium">Shares is available to savvy investors all over the world</p>
+          <h2 className="text-4xl py-3 font-semibold">{t('how_it_works')}</h2>
+          <p className="font-medium">{t('how_it_works_sub')}</p>
         </div>
         <div className="hidden sm:grid gap-4 grid-cols-4 selector mb-6">
           <ReactWOW animation="slideInUp" duration="1s">
@@ -55,8 +57,8 @@ const HowItWorks = () => {
               onClick={() => setCurrentSlide(0)}
             >
               {currentSlide === 0 ? <div className="w-[40px] rounded-md h-1 bg-primary" /> : null}
-              <h4>Browse</h4>
-              <p>Sign up in less than 3 minutes and browse our collection of properties</p>
+              <h4>{t('browse')}</h4>
+              <p>{t('browse_sub')}</p>
             </div>
           </ReactWOW>
           <ReactWOW animation="slideInUp" duration="1.2s">
@@ -65,8 +67,8 @@ const HowItWorks = () => {
               onClick={() => setCurrentSlide(1)}
             >
               {currentSlide === 1 ? <div className="w-[40px] rounded-md h-1 bg-primary" /> : null}
-              <h4>Purchase</h4>
-              <p>Buy a piece of the ones you love, starting from only USD 500</p>
+              <h4>{t('purchase')}</h4>
+              <p>{t('purchase_sub')}</p>
             </div>
           </ReactWOW>
           <ReactWOW animation="slideInUp" duration="1.4s">
@@ -75,8 +77,8 @@ const HowItWorks = () => {
               onClick={() => setCurrentSlide(2)}
             >
               {currentSlide === 2 ? <div className="w-[40px] rounded-md h-1 bg-primary" /> : null}
-              <h4>Own</h4>
-              <p>Sit back and track your income and investments online</p>
+              <h4>{t('own')}</h4>
+              <p>{t('own_sub')}</p>
             </div>
           </ReactWOW>
           <ReactWOW animation="slideInUp" duration="1.5s">
@@ -85,24 +87,24 @@ const HowItWorks = () => {
               onClick={() => setCurrentSlide(3)}
             >
               {currentSlide === 3 ? <div className="w-[40px] rounded-md h-1 bg-primary" /> : null}
-              <h4>Exit</h4>
-              <p>Hold, exit or resell your Shares in a way that suits your financial goals</p>
+              <h4>{t('exit')}</h4>
+              <p>{t('exit_sub')}</p>
             </div>
           </ReactWOW>
         </div>
         <div className="users-mobile-group min-h-[250px] sm:min-h-[50px] mb-6">
           <div className="grid sm:hidden gap-2 grid-cols-4">
             <button className={`${currentSlide === 0 ? 'active' : null}`} onClick={() => setCurrentSlide(0)}>
-              Browse
+              {t('browse')}
             </button>
             <button className={`${currentSlide === 1 ? 'active' : null}`} onClick={() => setCurrentSlide(1)}>
-              Purchase
+              {t('purchase')}
             </button>
             <button className={`${currentSlide === 2 ? 'active' : null}`} onClick={() => setCurrentSlide(2)}>
-              Own
+              {t('own')}
             </button>
             <button className={`${currentSlide === 3 ? 'active' : null}`} onClick={() => setCurrentSlide(3)}>
-              Exit
+              {t('exit')}
             </button>
           </div>
           <div className="py-6 block sm:hidden">
@@ -126,28 +128,28 @@ const HowItWorks = () => {
             <SliderElement
               img={HowItWorksImg1}
               icon={HowItWorksIcon1}
-              desc="Our team of property professionals combine a data driven valuation and analysis process with over 20 years of leadership experience at the top real estate companies in Bali, to source the best rental properties with the highest investment potential for you."
+              desc={t('browse_entry')}
             />
           )}
           {currentSlide === 1 && (
             <SliderElement
               img={HowItWorksImg2}
               icon={HowItWorksIcon2}
-              desc="You can purchase shares in the properties that make sense for you, no matter where you are in the world. All investor funds are held in a segregated account, which is used to create an SPV (holding company) in the DIFC to purchase each property (100% owned by you and the other investors)."
+              desc={t('purchase_entry')}
             />
           )}
           {currentSlide === 2 && (
             <SliderElement
               img={HowItWorksImg3}
               icon={HowItWorksIcon3}
-              desc="Once you invest, we’ll take care of everything, from maintaining the property, to making sure there’s always a tenant in place. You can track your monthly income and manage your investments in real time using our mobile app or web platform."
+              desc={t('own_entry')}
             />
           )}
           {currentSlide === 3 && (
             <SliderElement
               img={HowItWorksImg4}
               icon={HowItWorksIcon4}
-              desc="We work to sell all of our assets at a significantly higher valuation than the purchase price, with investors voting to accept or reject any offers we receive. We’re also launching our secondary market in Q1 2023, but we do recommend a holding period of 5 years in order to maximise your return"
+              desc={t('exit_entry')}
             />
           )}
         </div>

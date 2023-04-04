@@ -10,6 +10,7 @@ import AirBNBICO from 'public/assets/social/air-bnb.jpg';
 import MetamaskICO from 'public/assets/social/metamask-icon.svg';
 import HooperICO from 'public/assets/social/hooper.jpg';
 import TravelICO from 'public/assets/social/traverl.jpg';
+import { useTranslation } from 'next-i18next';
 
 const CustomNextArrow = (props) => {
   // eslint-disable-next-line react/prop-types
@@ -108,6 +109,7 @@ const Property = (props) => {
     nextArrow: <CustomNextArrow />,
     prevArrow: <CustomPrevArrow />,
   };
+  const { t } = useTranslation('common');
   return (
     <ReactWOW animation="slideInRight" duration="1s" delay="0.5s">
       <div className="rounded-md bg-white shadow property-component cursor-pointer">
@@ -176,42 +178,42 @@ const Property = (props) => {
           <div className="grid gap-3 bg-gray-200 grid-cols-3 rounded-md p-2 my-3">
             <div className="p-1">
               <p className="text-sm font-medium">+{property?.project_roi}%</p>
-              <p className="text-xs text-gray-600">project ROI(10y)</p>
+              <p className="text-xs text-gray-600">{t('project_10_roi')}</p>
             </div>
             <div className="p-1">
               <p className="text-sm font-medium">+{property?.annual_roi}%</p>
-              <p className="text-xs text-gray-600">annual ROI(1y)</p>
+              <p className="text-xs text-gray-600">{t('annual_roi')}</p>
             </div>
             <div className="p-1">
               <p className="text-sm font-medium">{dateFormat(property?.closed)}</p>
-              <p className="text-xs text-gray-600">closed</p>
+              <p className="text-xs text-gray-600">{t('closed')}</p>
             </div>
           </div>
 
           <div className="flex flex-row justify-between mt-5 mb-3">
             <div className="font-semibold flex flex-col">
               <div>
-                <p className="font-light mr-1">Rent Daily</p>
+                <p className="font-light mr-1">{t('rent_daily')}</p>
               </div>
-              <div className='flex flex-row items-center'>
-                <span className="lowercase">usd</span> 
-                <span className='text-xl ml-1'>{property?.price_rent_month}</span>
-                <span className='flex flex-row'>
-                  <img src={AirBNBICO.src} alt="" className='ml-1 h-[20px]' />
-                  <img src={BookingICO.src} alt="" className='ml-1 h-[20px]' />
-                  <img src={HooperICO.src} alt="" className='ml-1 h-[20px] object-contain' />
-                  <img src={TravelICO.src} alt="" className='ml-1 h-[20px]' />
+              <div className="flex flex-row items-center">
+                <span className="lowercase">usd</span>
+                <span className="text-xl ml-1">{property?.price_rent_month}</span>
+                <span className="flex flex-row">
+                  <img src={AirBNBICO.src} alt="" className="ml-1 h-[20px]" />
+                  <img src={BookingICO.src} alt="" className="ml-1 h-[20px]" />
+                  <img src={HooperICO.src} alt="" className="ml-1 h-[20px] object-contain" />
+                  <img src={TravelICO.src} alt="" className="ml-1 h-[20px]" />
                 </span>
               </div>
             </div>
             <div className="font-semibold capitalize flex flex-col">
               <div>
-                <span className="font-light">Distribution {property?.distribution}</span>
+                <span className="font-light">{t('distribution')} {property?.distribution}</span>
               </div>
-              <div className='flex flex-row items-center'>
-                <span className="lowercase">usd</span> 
-                <span className='text-xl ml-1'>{numberFormat(property?.price_distribution)}</span>
-                <img src={MetamaskICO.src} alt="" className='ml-1 h-[20px] w-[20px]' />
+              <div className="flex flex-row items-center">
+                <span className="lowercase">usd</span>
+                <span className="text-xl ml-1">{numberFormat(property?.price_distribution)}</span>
+                <img src={MetamaskICO.src} alt="" className="ml-1 h-[20px] w-[20px]" />
               </div>
             </div>
           </div>

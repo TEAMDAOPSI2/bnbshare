@@ -12,13 +12,26 @@ import RewardsSection from '@/sections/welcome/RewardsSection';
 import BestAssetSection from '@/sections/welcome/BestAssetSection';
 import ReadyToGetSection from '@/sections/welcome/ReadyToGetSection';
 import Footer from '@/components/Footer';
+import {serverSideTranslations} from "next-i18next/serverSideTranslations";
+
+
+export const getStaticProps = async ({ locale }) => ({
+  props: {
+    ...(await serverSideTranslations(locale, ['common', 'home'])),
+  },
+})
+
+
 
 export default function Home() {
   return (
     <div className>
       <Head>
         <title>Shares | Villas</title>
-        <meta name="description" content="Share Villas, We leverage our network and expertise, built up over 20+ years leading the biggest real estate companies in Bali, to source the best properties with the highest investment potential for you" />
+        <meta
+          name="description"
+          content="Share Villas, We leverage our network and expertise, built up over 20+ years leading the biggest real estate companies in Bali, to source the best properties with the highest investment potential for you"
+        />
         <meta name="keywords" content="shares, villas, property, investment, bali, indonesia" />
         <meta name="author" content="Shares" />
         <meta name="viewport" content="width=device-width, initial-scale=1.0" />

@@ -4,6 +4,7 @@ import 'slick-carousel/slick/slick.css';
 import 'slick-carousel/slick/slick-theme.css';
 import { useEffect, useState } from 'react';
 import supabase from '@/utils/api';
+import { useTranslation } from 'next-i18next';
 
 const CustomNextArrow = (props) => {
   // eslint-disable-next-line react/prop-types
@@ -116,7 +117,9 @@ const PropertiesSection = () => {
   useEffect(() => {
     getProperties().then((data) => setProperties(data));
   }, []);
-  
+
+  const { t } = useTranslation('common');
+
   const settings = {
     dots: false,
     slidesToShow: 3,
@@ -145,11 +148,8 @@ const PropertiesSection = () => {
     <section className="bg-gray-100 properties-founded">
       <div className="container py-6 px-3 mx-auto">
         <div className="header py-3 text-center flex flex-col items-center">
-          <h2 className="text-3xl font-bold py-3">Funded properties</h2>
-          <p className="text-center md:w-[70%] py-3 text-gray-900">
-            We leverage our network and expertise, built up over 20+ years leading the biggest real estate companies in
-            Bali, to source the best properties with the highest investment potential for you
-          </p>
+          <h2 className="text-3xl font-bold py-3">{t('funded_properties')}</h2>
+          <p className="text-center md:w-[70%] py-3 text-gray-900">{t('funded_properties_description')}</p>
         </div>
 
         {/* eslint-disable-next-line react/jsx-props-no-spreading */}
@@ -162,7 +162,6 @@ const PropertiesSection = () => {
               </div>
             ))
           }
-      
         </Slider>
 
         <div className="text-center mt-[60px] mb-[40px]">
@@ -170,7 +169,7 @@ const PropertiesSection = () => {
             href="#"
             className="rounded-lg py-3 px-6 border border-gray-300 font-semibold transition ease-in-out duration-150 hover:bg-primary hover:border-primary-hover hover:text-white"
           >
-            View available properties
+            {t('view_available_properties')}
           </a>
         </div>
       </div>

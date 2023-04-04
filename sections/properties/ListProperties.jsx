@@ -2,10 +2,12 @@ import Property from '@/components/Property';
 // eslint-disable-next-line import/extensions
 import supabase from '@/utils/api';
 import { useEffect, useState } from 'react';
+import {useTranslation} from "next-i18next";
 
 const ListProperties = () => {
   const [properties, setProperties] = useState([]);
   const [status, setStatus] = useState('available');
+  const {t} = useTranslation();
 
   const refactoredData = (data) => {
     const temp = {};
@@ -42,7 +44,7 @@ const ListProperties = () => {
               status === 'available' ? 'bg-primary text-white' : 'bg-white text-black'
             } py-3 px-6 rounded-full hover:text-white transition ease-in-out duration-150 hover:bg-primary-hover`}
           >
-            Available
+            {t('available')}
           </button>
           <button
             onClick={() => setStatus('funded')}
@@ -50,7 +52,7 @@ const ListProperties = () => {
               status === 'funded' ? 'bg-primary text-white' : 'bg-white text-black'
             } py-3 px-6 rounded-full hover:text-white transition ease-in-out duration-150 hover:bg-primary-hover`}
           >
-            Funded
+            {t('funded')}
           </button>
           
         </div>

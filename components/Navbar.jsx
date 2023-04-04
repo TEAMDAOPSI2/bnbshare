@@ -6,6 +6,10 @@ import { faHome, faStoreAlt, faChartLine, faBars, faClose } from '@fortawesome/f
 import DropDown from '@/components/navbar/DropDown';
 import AnchorLink from '@/components/navbar/AnchorLink';
 import { useEffect, useState } from 'react';
+import enFlag from 'public/assets/us-flag.png';
+import esFlag from 'public/assets/spain-flag.png';
+import DropDownLanguages from '@/components/navbar/Languages';
+import { useTranslation } from 'next-i18next';
 
 // add token to wallet metamask
 const addToWallet = async () => {
@@ -35,6 +39,7 @@ const Navbar = ({ pathName }) => {
   const [isOpen, setIsOpen] = useState(false);
   const [scrolled, setScrolled] = useState(false);
   const [currentAccount, setCurrentAccount] = useState(null);
+  const { t } = useTranslation();
 
   const handleScroll = () => {
     const offset = window.scrollY;
@@ -83,11 +88,11 @@ const Navbar = ({ pathName }) => {
   }, []);
 
   const sellNav = {
-    title: 'Sell',
+    title: t('sell'),
     links: [
-      { name: 'Sell with Shares', href: '/sell-with-shares', icon: <FontAwesomeIcon icon={faHome} /> },
+      { name: t('sell_with_shares'), href: '/sell-with-shares', icon: <FontAwesomeIcon icon={faHome} /> },
       {
-        name: 'Sell transfer Facility',
+        name: t('sell_transfer_facility'),
         href: '/shares-secondary-transfer-facility',
         icon: <FontAwesomeIcon icon={faStoreAlt} />,
       },
@@ -95,8 +100,16 @@ const Navbar = ({ pathName }) => {
   };
 
   const LearnNav = {
-    title: 'Learn',
-    links: [{ name: 'Insight', href: '#', icon: <FontAwesomeIcon icon={faChartLine} /> }],
+    title: t('learn'),
+    links: [{ name: t('insight'), href: '#', icon: <FontAwesomeIcon icon={faChartLine} /> }],
+  };
+
+  const LanguageNav = {
+    title: 'Language',
+    links: [
+      { name: 'English', code: 'en', icon: null, img: enFlag },
+      { name: 'Español', code: 'es', icon: null, img: esFlag },
+    ],
   };
 
   return (
@@ -116,17 +129,15 @@ const Navbar = ({ pathName }) => {
                 href="/properties"
                 className={pathName === '/properties' ? 'text-primary border-b-2 border-primary-hover' : null}
               >
-                Properties
+                {t('properties')}
               </AnchorLink>
               <AnchorLink
                 href="/about"
                 className={pathName === '/about' ? 'text-primary border-b-2 border-primary-hover' : null}
               >
-                About
+                {t('about')}
               </AnchorLink>
-              <AnchorLink
-                  href="https://etherscan.io/address/0x5308d43a01230874d98dceabde720af303a27c2c"
-              >
+              <AnchorLink href="https://etherscan.io/address/0x5308d43a01230874d98dceabde720af303a27c2c">
                 sharesvillas.eth
               </AnchorLink>
               <DropDown props={sellNav} />
@@ -148,12 +159,15 @@ const Navbar = ({ pathName }) => {
                   onClick={() => addToWallet()}
                   className="p-3 rounded-md border font-semibold hover:text-white hover:bg-primary-hover hover:border-primary-hover"
                 >
-                  <span>Add NFT </span> <span>to Metamask</span>
+                  <span>{t('add_nft')} </span> <span>{t('to_metamask')}</span>
                 </button>
               </li>
               <li className="p-3">
-                <button onClick={connectWallet} className="p-3 bg-primary text-white rounded-md font-semibold hover:bg-primary-hover">
-                  {currentAccount ? (`${currentAccount.slice(0, 6)}...${currentAccount.slice(-4)}`) : (`Connect Wallet`)}
+                <button
+                  onClick={connectWallet}
+                  className="p-3 bg-primary text-white rounded-md font-semibold hover:bg-primary-hover"
+                >
+                  {currentAccount ? `${currentAccount.slice(0, 6)}...${currentAccount.slice(-4)}` : t('connect_wallet')}
                 </button>
               </li>
 
@@ -162,6 +176,7 @@ const Navbar = ({ pathName }) => {
                   <FontAwesomeIcon icon={faBars} />
                 </button>
               </li>
+              <DropDownLanguages props={LanguageNav} />
             </ul>
           </div>
         </div>
@@ -185,13 +200,13 @@ const Navbar = ({ pathName }) => {
                   href="/properties"
                   className={pathName === '/properties' ? 'text-primary border-b-2 border-primary-hover' : null}
                 >
-                  Properties
+                  {t('properties')}
                 </AnchorLink>
                 <AnchorLink
                   href="/about"
                   className={pathName === '/about' ? 'text-primary border-b-2 border-primary-hover' : null}
                 >
-                  About
+                    {t('about')}
                 </AnchorLink>
                 <DropDown props={sellNav} />
                 <DropDown props={LearnNav} />
@@ -203,7 +218,7 @@ const Navbar = ({ pathName }) => {
                   href="/"
                   className="p-3 flex w-full justify-center rounded-md border font-semibold hover:text-white hover:bg-primary-hover hover:border-primary-hover"
                 >
-                  Login
+                  {t('login')}
                 </Link>
               </li>
               <li className="p-3">
@@ -211,9 +226,12 @@ const Navbar = ({ pathName }) => {
                   href="/"
                   className="p-3 flex justify-center text-center bg-primary text-white rounded-md font-semibold hover:bg-primary-hover"
                 >
-                  Get Started
+                  {t('get_started')}
                 </Link>
               </li>
+              <div className="flex flex-col border-t border-gray-600 p-3 justify-self-end">
+                <DropDownLanguages props={LanguageNav} />
+              </div>
             </ul>
           </div>
         </div>

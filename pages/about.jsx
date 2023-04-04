@@ -6,6 +6,15 @@ import Worlds from '@/sections/about/Worlds';
 import ResponsibleInvesting from '@/sections/about/ResponsibleInvesting';
 import ReadyToGetSection from '@/sections/welcome/ReadyToGetSection';
 import Footer from '@/components/Footer';
+import {serverSideTranslations} from "next-i18next/serverSideTranslations";
+
+
+export const getStaticProps = async ({ locale }) => ({
+    props: {
+        ...(await serverSideTranslations(locale, ['common', 'home'])),
+    },
+})
+
 
 const About = () => {
   const router = useRouter();

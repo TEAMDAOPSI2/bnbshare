@@ -1,21 +1,18 @@
-const ResponsibleInvesting = () => (
-  <section className="bg-slate-200">
-    <div className="container py-12 px-3 mx-auto">
-      <div className="flex flex-col items-center justify-center md:max-w-[60%] mx-auto">
-        <h2 className="py-3 text-4xl font-bold text-center">Responsible Investing</h2>
-        <p className="py-3">
-          Shares has recently been assessed by the Supervisory Board of Guidance Financial Group, a leading financial
-          services firm specialized in the fields of Shariah-compliant investments and financing as well as Shariah
-          advisory services.
-        </p>
-        <p className="py-3">
-          We have submitted an application to our regulator, the DFSA, for an Islamic Window endorsement on our license.
-          Should we receive approval, we will then be allowed to offer Shariah-compliant Islamic Financial Business
-          through the Islamic Window alongside the conventional business that we currently carry out.
-        </p>
+import { useTranslation } from 'next-i18next';
+
+const ResponsibleInvesting = () => {
+  const { t } = useTranslation('common');
+  return (
+    <section className="bg-slate-200">
+      <div className="container py-12 px-3 mx-auto">
+        <div className="flex flex-col items-center justify-center md:max-w-[60%] mx-auto">
+          <h2 className="py-3 text-4xl font-bold text-center">{t('responsible_investing')}</h2>
+          <p className="py-3">{t('responsible_investing_entry')}</p>
+          <p className="py-3">{t('responsible_investing_entry2')}</p>
+        </div>
       </div>
-    </div>
-  </section>
-);
+    </section>
+  );
+};
 
 export default ResponsibleInvesting;

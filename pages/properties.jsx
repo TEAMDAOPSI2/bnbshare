@@ -4,6 +4,15 @@ import Hero from '@/sections/properties/Hero';
 import { useRouter } from 'next/router';
 import ListProperties from '@/sections/properties/ListProperties';
 import Footer from '@/components/Footer';
+import {serverSideTranslations} from "next-i18next/serverSideTranslations";
+
+
+export const getStaticProps = async ({ locale }) => ({
+    props: {
+        ...(await serverSideTranslations(locale, ['common', 'home'])),
+    },
+})
+
 
 const properties = () => {
   const router = useRouter();
