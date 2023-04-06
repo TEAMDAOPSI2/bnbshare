@@ -34,7 +34,7 @@ svg {
 .hero-welcome .clip-path {
   content: '';
   position: absolute;
-  z-index: 1;
+  z-index: -1;
   top: 0;
   left: 0;
   width: 100%;
@@ -122,12 +122,23 @@ svg {
 .investor-say .clip {
   clip-path: polygon(75% 0, 100% 0%, 100% 100%, 44% 100%);
   content: '';
+  z-index: 0;
   background: #121c30;
   position: absolute;
   width: 100%;
   height: 100%;
   @media (max-width: 680px) {
     clip-path: polygon(0 75%, 100% 32%, 100% 100%, 0% 100%);
+  }
+}
+
+// rtl layout dir="rtl"
+.rtl {
+  .investor-say .clip{
+    clip-path: polygon(25% 0, 0% 0%, 0% 100%, 56% 100%);
+    @media (max-width: 680px) {
+      clip-path: polygon(0 75%, 100% 32%, 100% 100%, 0% 100%);
+    }
   }
 }
 

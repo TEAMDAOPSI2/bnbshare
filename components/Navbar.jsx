@@ -8,6 +8,8 @@ import AnchorLink from '@/components/navbar/AnchorLink';
 import { useEffect, useState } from 'react';
 import enFlag from 'public/assets/us-flag.png';
 import esFlag from 'public/assets/spain-flag.png';
+import uaeFlag from 'public/assets/uae-flag.png';
+import frFlag from 'public/assets/france-flag.png';
 import DropDownLanguages from '@/components/navbar/Languages';
 import { useTranslation } from 'next-i18next';
 
@@ -109,6 +111,8 @@ const Navbar = ({ pathName }) => {
     links: [
       { name: 'English', code: 'en', icon: null, img: enFlag },
       { name: 'Español', code: 'es', icon: null, img: esFlag },
+      { name: 'Arabic ', code: 'ar', icon: null, img: uaeFlag},
+      { name: 'Français', code: 'fr', icon: null, img: frFlag },
     ],
   };
 
