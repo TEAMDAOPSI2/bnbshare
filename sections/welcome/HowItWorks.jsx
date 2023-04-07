@@ -110,13 +110,13 @@ const HowItWorks = () => {
           <div className="py-6 block sm:hidden">
             <p className="py-3">
               {currentSlide === 0 &&
-                'Our team of property professionals combine a data driven valuation and analysis process with over 20 years of leadership experience at the top real estate companies in Bali, to source the best rental properties with the highest investment potential for you.'}
+                t('browse_sub')}
               {currentSlide === 1 &&
-                'Buy a piece of the ones you love, starting from only USD 500. We offer a range of investment options to suit your financial goals.'}
+                t('purchase_sub')}
               {currentSlide === 2 &&
-                'Sit back and track your income and investments online. We provide you with a monthly income statement and a dashboard to track your investments.'}
+                t('own_sub')}
               {currentSlide === 3 &&
-                'Hold, exit or resell your shares in a way that suits your financial goals. We offer a range of exit options to suit your needs.'}
+                t('exit_sub')}
             </p>
           </div>
         </div>

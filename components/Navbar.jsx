@@ -180,7 +180,7 @@ const Navbar = ({ pathName }) => {
                   <FontAwesomeIcon icon={faBars} />
                 </button>
               </li>
-              <DropDownLanguages props={LanguageNav} />
+              <DropDownLanguages props={{ ...LanguageNav }} />
             </ul>
           </div>
         </div>
@@ -210,7 +210,7 @@ const Navbar = ({ pathName }) => {
                   href="/about"
                   className={pathName === '/about' ? 'text-primary border-b-2 border-primary-hover' : null}
                 >
-                    {t('about')}
+                  {t('about')}
                 </AnchorLink>
                 <DropDown props={sellNav} />
                 <DropDown props={LearnNav} />
@@ -233,9 +233,6 @@ const Navbar = ({ pathName }) => {
                   {t('get_started')}
                 </Link>
               </li>
-              <div className="flex flex-col border-t border-gray-600 p-3 justify-self-end">
-                <DropDownLanguages props={LanguageNav} />
-              </div>
             </ul>
           </div>
         </div>

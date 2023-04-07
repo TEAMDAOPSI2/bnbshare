@@ -86,7 +86,7 @@ const RewardsSection = () => {
                     <path d="M20 6.5L9 17.5L4 12.5" />
                   </g>
                 </svg>
-                1.5% {t('cashback equivalent on every investment')}
+                1.5% {t('cashback')}
               </div>
               <div className="flex flex-row items-center py-2 text-xl text-gray-500">
                 <svg viewBox="0 0 24 24" focusable="false" className="w-[30px] mr-2" aria-label="cross">
